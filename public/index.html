@@ -4,103 +4,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="dark">
 <title>El Diario de los Astros · 16 mayo 2026</title>
 <style>
-html, body {
-  background-color: #040804 !important;
-}
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  min-height: 100vh;
-  background: #040804 url("data:image/svg+xml,") no-repeat;
-  background: radial-gradient(ellipse at 20% 0%, #0d1a0a, #090f06 50%, #040804) !important;
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-  color: #1a1208;
-  overflow-x: hidden;
-}
-#stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
-@keyframes twinkle { 0%,100%{opacity:0;transform:scale(.8)} 50%{opacity:.8;transform:scale(1.2)} }
-@keyframes floatUp { 0%{opacity:0;transform:translateY(26px)} 100%{opacity:1;transform:translateY(0)} }
-@keyframes glow { 0%,100%{box-shadow:0 0 16px #c9a04466,0 0 32px #c9a04422} 50%{box-shadow:0 0 28px #c9a044aa,0 0 52px #c9a04444} }
+body { min-height: 100vh; background: #faf7f0; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #1a1208; }
+@keyframes floatUp { 0%{opacity:0;transform:translateY(20px)} 100%{opacity:1;transform:translateY(0)} }
 @keyframes shimmer { 0%{background-position:-200% center} 100%{background-position:200% center} }
-@keyframes drift { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-8px) rotate(2deg)} }
-@keyframes reveal { 0%{opacity:0;transform:rotateY(90deg)} 100%{opacity:1;transform:rotateY(0)} }
+@keyframes drift { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+@keyframes pulse { 0%,100%{opacity:.6} 50%{opacity:1} }
 @keyframes msgIn { 0%{opacity:0;transform:translateY(8px)} 100%{opacity:1;transform:translateY(0)} }
-@keyframes pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
-@keyframes moonGlow { 0%,100%{filter:drop-shadow(0 0 8px #c9a04466)} 50%{filter:drop-shadow(0 0 20px #c9a044cc)} }
-.wrapper { max-width: 500px; margin: 0 auto; padding: 36px 20px 70px; position: relative; z-index: 1; }
-.header { text-align: center; margin-bottom: 30px; animation: floatUp .8s ease forwards; }
-.header-date { font-size: 10px; letter-spacing: 6px; color: #c9a044; text-transform: uppercase; margin-bottom: 8px; }
-.header-title { font-size: 30px; font-weight: normal; font-style: italic; margin-bottom: 6px; background: linear-gradient(135deg, #c9a044, #e8d080, #e8dfc8, #c9a044); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
-.header-sub { font-size: 11px; color: #2a2010; letter-spacing: 3px; }
-.luna-badge { display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #1a1400, #2a2000); border: 1px solid #c9a04455; border-radius: 12px; padding: 14px 18px; margin-bottom: 22px; animation: glow 3s ease-in-out infinite; }
-.luna-badge-icon { font-size: 30px; animation: moonGlow 3s ease-in-out infinite; }
+@keyframes reveal { 0%{opacity:0;transform:rotateY(90deg)} 100%{opacity:1;transform:rotateY(0)} }
+.wrapper { max-width: 500px; margin: 0 auto; padding: 36px 20px 70px; }
+.header { text-align: center; margin-bottom: 28px; animation: floatUp .8s ease forwards; }
+.header-date { font-size: 10px; letter-spacing: 6px; color: #8a6a10; text-transform: uppercase; margin-bottom: 8px; }
+.header-title { font-size: 30px; font-weight: normal; font-style: italic; margin-bottom: 6px; background: linear-gradient(135deg, #8a6a10, #c9a044, #8a6a10); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
+.header-sub { font-size: 11px; color: #6b5030; letter-spacing: 3px; }
+.luna-badge { display: flex; align-items: center; justify-content: center; gap: 10px; background: #1a1400; border-radius: 12px; padding: 14px 18px; margin-bottom: 22px; }
+.luna-badge-icon { font-size: 28px; }
 .luna-badge-title { font-size: 17px; color: #c9a044; margin-bottom: 2px; }
 .luna-badge-time { font-size: 11px; color: #8a7840; letter-spacing: 1px; }
 .tabs { display: flex; justify-content: center; margin-bottom: 24px; }
-.tab-btn { background: transparent; border: 1px solid #c9a04433; color: #1a1208; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
+.tab-btn { background: transparent; border: 1px solid #c9a04466; color: #3a2a08; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
 .tab-btn:first-child { border-radius: 4px 0 0 4px; }
 .tab-btn:last-child { border-radius: 0 4px 4px 0; }
-.tab-btn.active { background: #c9a04428; border-color: #c9a044; color: #c9a044; }
+.tab-btn.active { background: #c9a04422; border-color: #c9a044; color: #7a5a00; }
 .panel { display: none; }
 .panel.on { display: block; animation: floatUp .5s ease forwards; }
-.main-card { background: linear-gradient(135deg, #1a1a0a44, #c9a04410); border: 1px solid #c9a04455; border-radius: 16px; padding: 22px 20px; margin-bottom: 20px; animation: glow 4s ease-in-out infinite; }
-.main-label { font-size: 10px; letter-spacing: 4px; color: #c9a044; text-transform: uppercase; margin-bottom: 10px; }
-.main-body { font-size: 13.5px; line-height: 1.9; color: #2a2010; }
-.main-body strong { color: #c9a044; }
-.main-body em { color: #8aba55; }
-.algol-card { background: linear-gradient(135deg, #1a0a0a33, #8a222210); border: 1px solid #8a222244; border-radius: 14px; padding: 18px; margin-bottom: 20px; }
-.algol-label { font-size: 10px; letter-spacing: 4px; color: #c97755; text-transform: uppercase; margin-bottom: 8px; }
-.algol-body { font-size: 13px; line-height: 1.85; color: #2a2010; font-style: italic; }
-.algol-body strong { color: #c97755; }
-.divider { border: none; border-top: 1px solid #c9a04422; margin: 18px 0; }
-.s-label { font-size: 10px; letter-spacing: 4px; color: #2a2010; text-transform: uppercase; margin-bottom: 12px; }
-.consejo { background: linear-gradient(135deg, #0a1a0a44, #5a8a2210); border-left: 3px solid #8aba55; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; }
-.consejo-label { font-size: 10px; letter-spacing: 4px; color: #8aba55; text-transform: uppercase; margin-bottom: 8px; }
-.consejo-text { font-size: 14px; line-height: 1.85; color: #2a2010; font-style: italic; }
-.intencion { background: linear-gradient(135deg, #1a1a0a44, #c9a04408); border: 1px solid #c9a04433; border-radius: 14px; padding: 18px; margin-bottom: 18px; }
-.intencion-label { font-size: 10px; letter-spacing: 4px; color: #c9a044; text-transform: uppercase; margin-bottom: 10px; }
-.intencion-q { font-size: 15px; color: #e8d080; font-style: italic; line-height: 1.7; border-left: 2px solid #c9a04444; padding-left: 14px; margin-bottom: 10px; }
-.intencion-text { font-size: 13px; color: #2a2010; line-height: 1.7; }
-.ciclo { background: #c9a04408; border: 1px dashed #c9a04433; border-radius: 10px; padding: 12px 16px; font-size: 12px; color: #2a2010; display: flex; align-items: flex-start; gap: 10px; }
-.ciclo strong { color: #c9a044; }
+.main-card { background: #fff; border: 1px solid #c9a04444; border-radius: 16px; padding: 22px 20px; margin-bottom: 18px; box-shadow: 0 2px 12px #c9a04418; }
+.main-label { font-size: 10px; letter-spacing: 4px; color: #8a6a10; text-transform: uppercase; margin-bottom: 10px; }
+.main-body { font-size: 14px; line-height: 1.9; color: #1a1208; }
+.main-body strong { color: #7a5a00; }
+.main-body em { color: #4a7a20; font-style: italic; }
+.algol-card { background: #fff5f0; border: 1px solid #c9774455; border-radius: 14px; padding: 18px; margin-bottom: 18px; }
+.algol-label { font-size: 10px; letter-spacing: 4px; color: #a05030; text-transform: uppercase; margin-bottom: 8px; }
+.algol-body { font-size: 13.5px; line-height: 1.85; color: #2a1a10; font-style: italic; }
+.algol-body strong { color: #a05030; font-style: normal; }
+.divider { border: none; border-top: 1px solid #c9a04433; margin: 18px 0; }
+.s-label { font-size: 10px; letter-spacing: 4px; color: #8a6a10; text-transform: uppercase; margin-bottom: 12px; }
+.consejo { background: #f0fff4; border-left: 3px solid #4a8a20; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; }
+.consejo-label { font-size: 10px; letter-spacing: 4px; color: #4a7a20; text-transform: uppercase; margin-bottom: 8px; }
+.consejo-text { font-size: 14px; line-height: 1.85; color: #1a2a10; font-style: italic; }
+.intencion { background: #fff; border: 1px solid #c9a04444; border-radius: 14px; padding: 18px; margin-bottom: 18px; }
+.intencion-label { font-size: 10px; letter-spacing: 4px; color: #8a6a10; text-transform: uppercase; margin-bottom: 10px; }
+.intencion-q { font-size: 15px; color: #5a3a00; font-style: italic; line-height: 1.7; border-left: 2px solid #c9a044; padding-left: 14px; margin-bottom: 10px; }
+.intencion-text { font-size: 13px; color: #3a3020; line-height: 1.7; }
+.ciclo { background: #fffbf0; border: 1px dashed #c9a04466; border-radius: 10px; padding: 12px 16px; font-size: 12px; color: #3a3020; display: flex; align-items: flex-start; gap: 10px; }
+.ciclo strong { color: #7a5a00; }
 .tarot-num { text-align: center; margin-bottom: 22px; }
-.tarot-num-lbl { font-size: 11px; color: #2a2010; letter-spacing: 2px; margin-bottom: 5px; }
-.tarot-num-val { font-size: 11px; color: #2a2010; }
-.tarot-num-val strong { color: #c9a044; }
+.tarot-num-lbl { font-size: 11px; color: #6b5030; letter-spacing: 2px; margin-bottom: 5px; }
+.tarot-num-val { font-size: 11px; color: #3a2a10; }
+.tarot-num-val strong { color: #8a6a10; }
 .card-back-wrap { text-align: center; }
-.card-back { width: 175px; height: 285px; margin: 0 auto 20px; background: linear-gradient(160deg, #080f04, #111a06, #080f04); border: 2px solid #c9a044; border-radius: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; animation: drift 3s ease-in-out infinite, glow 2.5s ease-in-out infinite; position: relative; overflow: hidden; }
-.card-back::before { content:''; position:absolute; inset:8px; border:1px solid #c9a04422; border-radius:10px; pointer-events:none; }
+.card-back { width: 175px; height: 285px; margin: 0 auto 20px; background: linear-gradient(160deg, #1a1400, #2a2000, #1a1400); border: 2px solid #c9a044; border-radius: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; animation: drift 3s ease-in-out infinite; position: relative; overflow: hidden; }
 .card-back-icon { font-size: 46px; animation: pulse 2.5s ease-in-out infinite; }
 .card-back-lbl { font-size: 10px; letter-spacing: 3px; color: #c9a044; text-transform: uppercase; }
-.card-back-hint { font-size: 10px; color: #2a2010; }
-.card-back-sub { font-size: 12px; color: #2a2010; font-style: italic; }
+.card-back-hint { font-size: 10px; color: #6b5020; }
+.card-back-sub { font-size: 12px; color: #6b5030; font-style: italic; }
 .card-front-wrap { animation: reveal .8s ease forwards; }
-.card-face { width: 175px; height: 285px; margin: 0 auto 26px; background: linear-gradient(160deg, #080f04, #0d1a06, #080f04); border: 2px solid #c9a044; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 14px; animation: glow 3s ease-in-out infinite; position: relative; overflow: hidden; }
-.card-face::before { content:''; position:absolute; inset:8px; border:1px solid #c9a04422; border-radius:10px; pointer-events:none; }
+.card-face { width: 175px; height: 285px; margin: 0 auto 26px; background: linear-gradient(160deg, #1a1400, #2a2000, #1a1400); border: 2px solid #c9a044; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 14px; position: relative; overflow: hidden; }
 .card-roman { font-size: 10px; letter-spacing: 3px; color: #c9a044; }
 .card-art { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
-.card-main { font-size: 54px; animation: drift 3s ease-in-out infinite, moonGlow 3s ease-in-out infinite; }
+.card-main { font-size: 54px; animation: drift 3s ease-in-out infinite; }
 .card-orbs { display:flex; gap:10px; font-size:18px; }
 .card-name { font-size: 13px; letter-spacing: 2px; color: #c9a044; text-align:center; text-transform:uppercase; border-top: 1px solid #c9a04433; padding-top: 10px; width: 100%; }
-.card-info { background: linear-gradient(135deg, #1a1a0a33, #c9a04408); border: 1px solid #c9a04433; border-radius: 14px; padding: 20px 18px; margin-bottom: 18px; }
+.card-info { background: #fff; border: 1px solid #c9a04433; border-radius: 14px; padding: 20px 18px; margin-bottom: 18px; box-shadow: 0 2px 10px #c9a04418; }
 .card-info-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
-.card-info-title { font-size:17px; color:#c9a044; font-style:italic; }
-.card-info-badge { font-size:10px; letter-spacing:2px; color:#6b6040; }
-.card-info p { font-size:13.5px; line-height:1.9; color:#c8bfa8; }
+.card-info-title { font-size:17px; color:#7a5a00; font-style:italic; }
+.card-info-badge { font-size:10px; letter-spacing:2px; color:#8a6a10; }
+.card-info p { font-size:13.5px; line-height:1.9; color:#1a1208; }
 .card-info p+p { margin-top:10px; }
-.card-info strong { color:#c9a044; }
-.card-info em { color:#8aba55; }
+.card-info strong { color:#7a5a00; }
+.card-info em { color:#4a7a20; }
 .keywords { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
-.kw { font-size:11px; letter-spacing:1px; padding:5px 12px; border:1px solid #c9a04444; border-radius:20px; color:#c9a044; background:#c9a04410; opacity:0; animation: floatUp .5s ease forwards; }
-.reveal-btn { background: linear-gradient(135deg, #080f04, #111a06); border: 1px solid #c9a044; color: #c9a044; padding: 13px 38px; font-family:inherit; font-size:14px; letter-spacing:3px; text-transform:uppercase; cursor:pointer; border-radius:4px; animation: glow 2.5s ease-in-out infinite; transition:transform .2s; display:block; margin:0 auto; }
-.tarot-msg { background: linear-gradient(135deg, #c9a04411, #1a1a0a33); border: 1px solid #c9a044; border-radius: 12px; padding: 18px 20px; text-align:center; font-size:15px; font-style:italic; color:#e8d080; letter-spacing:.5px; line-height:1.7; animation: msgIn .8s ease forwards; }
-.footer { text-align:center; margin-top:40px; font-size:11px; color:#2a2810; letter-spacing:3px; }
+.kw { font-size:11px; letter-spacing:1px; padding:5px 12px; border:1px solid #c9a04466; border-radius:20px; color:#7a5a00; background:#fffbf0; }
+.reveal-btn { background: #1a1400; border: 1px solid #c9a044; color: #c9a044; padding: 13px 38px; font-family:inherit; font-size:14px; letter-spacing:3px; text-transform:uppercase; cursor:pointer; border-radius:4px; transition:transform .2s; display:block; margin:0 auto; }
+.reveal-btn:hover { transform:scale(1.04); }
+.tarot-msg { background: #fffbf0; border: 1px solid #c9a044; border-radius: 12px; padding: 18px 20px; text-align:center; font-size:15px; font-style:italic; color:#7a5a00; letter-spacing:.5px; line-height:1.7; animation: msgIn .8s ease forwards; }
+.footer { text-align:center; margin-top:40px; font-size:11px; color:#8a7840; letter-spacing:3px; }
 </style>
 </head>
 <body>
-<div id="stars"></div>
 <div class="wrapper">
   <div class="header">
     <div class="header-date">✦ Sábado · 16 de mayo de 2026 ✦</div>
@@ -188,11 +171,9 @@ body {
   <div class="footer">✦ · · ✦ · · ✦</div>
 </div>
 <script>
-const sc=document.getElementById('stars');
-for(let i=0;i<70;i++){const s=document.createElement('div');const sz=Math.random()*2.4+0.4;s.style.cssText='position:fixed;border-radius:50%;background:#fff;opacity:0;pointer-events:none;left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation:twinkle '+(Math.random()*3+2).toFixed(2)+'s '+(Math.random()*4).toFixed(2)+'s ease-in-out infinite;';sc.appendChild(s);}
 const kws=["Nuevo comienzo","Confianza","Salto de fe","Siembra","Apertura","Presencia"];
 const kl=document.getElementById('kw-list');
-kws.forEach((k,i)=>{const s=document.createElement('span');s.className='kw';s.style.animationDelay=i*0.1+'s';s.textContent=k;kl.appendChild(s);});
+kws.forEach((k,i)=>{const s=document.createElement('span');s.className='kw';s.textContent=k;kl.appendChild(s);});
 function switchTab(t){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById('panel-'+t).classList.add('on');document.getElementById('btn-'+t).classList.add('active');}
 function flipCard(){document.getElementById('back-wrap').style.display='none';document.getElementById('front-wrap').style.display='block';}
 const msgs=["Hoy sembrás. En noviembre cosechás.","No necesitás ver todo el camino para dar el primer paso.","Esta luna te pregunta qué querés construir de verdad.","Hay una versión tuya esperando del otro lado de este ciclo.","Confía en la semilla aunque aún no veas el árbol."];
