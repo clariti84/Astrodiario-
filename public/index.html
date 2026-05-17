@@ -16,7 +16,7 @@ body {
   background: #040804 url("data:image/svg+xml,") no-repeat;
   background: radial-gradient(ellipse at 20% 0%, #0d1a0a, #090f06 50%, #040804) !important;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-  color: #e8dfc8;
+  color: #1a1208;
   overflow-x: hidden;
 }
 #stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
@@ -33,13 +33,13 @@ body {
 .header { text-align: center; margin-bottom: 30px; animation: floatUp .8s ease forwards; }
 .header-date { font-size: 10px; letter-spacing: 6px; color: #c9a044; text-transform: uppercase; margin-bottom: 8px; }
 .header-title { font-size: 30px; font-weight: normal; font-style: italic; margin-bottom: 6px; background: linear-gradient(135deg, #c9a044, #e8d080, #e8dfc8, #c9a044); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
-.header-sub { font-size: 11px; color: #6b6040; letter-spacing: 3px; }
+.header-sub { font-size: 11px; color: #2a2010; letter-spacing: 3px; }
 .luna-badge { display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #1a1400, #2a2000); border: 1px solid #c9a04455; border-radius: 12px; padding: 14px 18px; margin-bottom: 22px; animation: glow 3s ease-in-out infinite; }
 .luna-badge-icon { font-size: 30px; animation: moonGlow 3s ease-in-out infinite; }
 .luna-badge-title { font-size: 17px; color: #c9a044; margin-bottom: 2px; }
 .luna-badge-time { font-size: 11px; color: #8a7840; letter-spacing: 1px; }
 .tabs { display: flex; justify-content: center; margin-bottom: 24px; }
-.tab-btn { background: transparent; border: 1px solid #c9a04433; color: #e8dfc8; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
+.tab-btn { background: transparent; border: 1px solid #c9a04433; color: #1a1208; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
 .tab-btn:first-child { border-radius: 4px 0 0 4px; }
 .tab-btn:last-child { border-radius: 0 4px 4px 0; }
 .tab-btn.active { background: #c9a04428; border-color: #c9a044; color: #c9a044; }
@@ -47,35 +47,35 @@ body {
 .panel.on { display: block; animation: floatUp .5s ease forwards; }
 .main-card { background: linear-gradient(135deg, #1a1a0a44, #c9a04410); border: 1px solid #c9a04455; border-radius: 16px; padding: 22px 20px; margin-bottom: 20px; animation: glow 4s ease-in-out infinite; }
 .main-label { font-size: 10px; letter-spacing: 4px; color: #c9a044; text-transform: uppercase; margin-bottom: 10px; }
-.main-body { font-size: 13.5px; line-height: 1.9; color: #c8bfa8; }
+.main-body { font-size: 13.5px; line-height: 1.9; color: #2a2010; }
 .main-body strong { color: #c9a044; }
 .main-body em { color: #8aba55; }
 .algol-card { background: linear-gradient(135deg, #1a0a0a33, #8a222210); border: 1px solid #8a222244; border-radius: 14px; padding: 18px; margin-bottom: 20px; }
 .algol-label { font-size: 10px; letter-spacing: 4px; color: #c97755; text-transform: uppercase; margin-bottom: 8px; }
-.algol-body { font-size: 13px; line-height: 1.85; color: #c8bfa8; font-style: italic; }
+.algol-body { font-size: 13px; line-height: 1.85; color: #2a2010; font-style: italic; }
 .algol-body strong { color: #c97755; }
 .divider { border: none; border-top: 1px solid #c9a04422; margin: 18px 0; }
-.s-label { font-size: 10px; letter-spacing: 4px; color: #6b6040; text-transform: uppercase; margin-bottom: 12px; }
+.s-label { font-size: 10px; letter-spacing: 4px; color: #2a2010; text-transform: uppercase; margin-bottom: 12px; }
 .consejo { background: linear-gradient(135deg, #0a1a0a44, #5a8a2210); border-left: 3px solid #8aba55; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; }
 .consejo-label { font-size: 10px; letter-spacing: 4px; color: #8aba55; text-transform: uppercase; margin-bottom: 8px; }
-.consejo-text { font-size: 14px; line-height: 1.85; color: #c8bfa8; font-style: italic; }
+.consejo-text { font-size: 14px; line-height: 1.85; color: #2a2010; font-style: italic; }
 .intencion { background: linear-gradient(135deg, #1a1a0a44, #c9a04408); border: 1px solid #c9a04433; border-radius: 14px; padding: 18px; margin-bottom: 18px; }
 .intencion-label { font-size: 10px; letter-spacing: 4px; color: #c9a044; text-transform: uppercase; margin-bottom: 10px; }
 .intencion-q { font-size: 15px; color: #e8d080; font-style: italic; line-height: 1.7; border-left: 2px solid #c9a04444; padding-left: 14px; margin-bottom: 10px; }
-.intencion-text { font-size: 13px; color: #9a9070; line-height: 1.7; }
-.ciclo { background: #c9a04408; border: 1px dashed #c9a04433; border-radius: 10px; padding: 12px 16px; font-size: 12px; color: #6b6040; display: flex; align-items: flex-start; gap: 10px; }
+.intencion-text { font-size: 13px; color: #2a2010; line-height: 1.7; }
+.ciclo { background: #c9a04408; border: 1px dashed #c9a04433; border-radius: 10px; padding: 12px 16px; font-size: 12px; color: #2a2010; display: flex; align-items: flex-start; gap: 10px; }
 .ciclo strong { color: #c9a044; }
 .tarot-num { text-align: center; margin-bottom: 22px; }
-.tarot-num-lbl { font-size: 11px; color: #6b6040; letter-spacing: 2px; margin-bottom: 5px; }
-.tarot-num-val { font-size: 11px; color: #4a4030; }
+.tarot-num-lbl { font-size: 11px; color: #2a2010; letter-spacing: 2px; margin-bottom: 5px; }
+.tarot-num-val { font-size: 11px; color: #2a2010; }
 .tarot-num-val strong { color: #c9a044; }
 .card-back-wrap { text-align: center; }
 .card-back { width: 175px; height: 285px; margin: 0 auto 20px; background: linear-gradient(160deg, #080f04, #111a06, #080f04); border: 2px solid #c9a044; border-radius: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; animation: drift 3s ease-in-out infinite, glow 2.5s ease-in-out infinite; position: relative; overflow: hidden; }
 .card-back::before { content:''; position:absolute; inset:8px; border:1px solid #c9a04422; border-radius:10px; pointer-events:none; }
 .card-back-icon { font-size: 46px; animation: pulse 2.5s ease-in-out infinite; }
 .card-back-lbl { font-size: 10px; letter-spacing: 3px; color: #c9a044; text-transform: uppercase; }
-.card-back-hint { font-size: 10px; color: #3a3020; }
-.card-back-sub { font-size: 12px; color: #6b6040; font-style: italic; }
+.card-back-hint { font-size: 10px; color: #2a2010; }
+.card-back-sub { font-size: 12px; color: #2a2010; font-style: italic; }
 .card-front-wrap { animation: reveal .8s ease forwards; }
 .card-face { width: 175px; height: 285px; margin: 0 auto 26px; background: linear-gradient(160deg, #080f04, #0d1a06, #080f04); border: 2px solid #c9a044; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 14px; animation: glow 3s ease-in-out infinite; position: relative; overflow: hidden; }
 .card-face::before { content:''; position:absolute; inset:8px; border:1px solid #c9a04422; border-radius:10px; pointer-events:none; }
