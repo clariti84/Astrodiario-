@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es" style="background:#060814!important;min-height:100vh">
+<html lang="es" style="background:#0d0610!important;min-height:100vh">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<title>El Diario de los Astros · 21 mayo 2026</title>
+<title>El Diario de los Astros · 22 mayo 2026</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { background: #060814 !important; }
-body { min-height: 100vh; background: #060814 !important; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #e8f0ff; }
-#bg { position: fixed; inset: 0; z-index: 0; background: radial-gradient(ellipse at 60% 5%, #0a1a3a 0%, #060814 45%, #020508 100%); }
+html { background: #0d0610 !important; }
+body { min-height: 100vh; background: #0d0610 !important; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #f0e8f5; }
+#bg { position: fixed; inset: 0; z-index: 0; background: radial-gradient(ellipse at 25% 8%, #200830 0%, #0d0610 45%, #060308 100%); }
 #stars { position: fixed; inset: 0; pointer-events: none; z-index: 1; }
 .wrapper { max-width: 500px; margin: 0 auto; padding: 36px 20px 70px; position: relative; z-index: 2; }
 @keyframes twinkle { 0%,100%{opacity:0;transform:scale(.8)} 50%{opacity:.9;transform:scale(1.2)} }
@@ -19,102 +19,109 @@ body { min-height: 100vh; background: #060814 !important; font-family: 'Palatino
 @keyframes pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
 @keyframes msgIn { 0%{opacity:0;transform:translateY(8px)} 100%{opacity:1;transform:translateY(0)} }
 @keyframes reveal { 0%{opacity:0;transform:rotateY(90deg)} 100%{opacity:1;transform:rotateY(0)} }
-@keyframes glowYellow { 0%,100%{box-shadow:0 0 14px #e8c03044,0 0 28px #e8c03022} 50%{box-shadow:0 0 26px #e8c03088,0 0 50px #e8c03044} }
-@keyframes glowBlue { 0%,100%{box-shadow:0 0 14px #60a8f044,0 0 28px #60a8f022} 50%{box-shadow:0 0 26px #60a8f088,0 0 50px #60a8f044} }
-@keyframes spin { 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }
+@keyframes glowRose { 0%,100%{box-shadow:0 0 14px #e8607044,0 0 28px #e8607022} 50%{box-shadow:0 0 26px #e8607088,0 0 50px #e8607044} }
+@keyframes glowGold { 0%,100%{box-shadow:0 0 14px #d4a03044,0 0 28px #d4a03022} 50%{box-shadow:0 0 26px #d4a03088,0 0 50px #d4a03044} }
 .header { text-align: center; margin-bottom: 26px; animation: floatUp .8s ease forwards; }
-.header-date { font-size: 12px; letter-spacing: 6px; color: #e8c030; font-weight: bold; text-transform: uppercase; margin-bottom: 8px; }
-.header-title { font-size: 30px; font-weight: normal; font-style: italic; margin-bottom: 6px; background: linear-gradient(135deg, #e8c030, #60a8f0, #e8f0ff, #e8c030); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
-.header-sub { font-size: 13px; color: #506080; letter-spacing: 3px; }
-.badge-sol { display: flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #1a1808, #0e1020); border: 1px solid #e8c03055; border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; animation: glowYellow 3s ease-in-out infinite; }
-.badge-luna { display: flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #081828, #060814); border: 1px solid #60a8f055; border-radius: 12px; padding: 14px 16px; margin-bottom: 22px; animation: glowBlue 3s ease-in-out infinite; }
+.header-date { font-size: 12px; letter-spacing: 6px; color: #e86070; text-transform: uppercase; margin-bottom: 8px; font-weight: bold; text-shadow: 0 1px 8px #00000099; }
+.header-title { font-size: 34px; font-weight: normal; font-style: italic; margin-bottom: 6px; background: linear-gradient(135deg, #e86070, #d4a030, #f0e8f5, #e86070); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
+.header-sub { font-size: 13px; color: #5a3050; letter-spacing: 3px; }
+.badges { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+.badge { display: flex; align-items: center; gap: 12px; border-radius: 12px; padding: 14px 16px; }
+.badge-venus { background: linear-gradient(135deg, #200818, #150410); border: 1px solid #e8607055; animation: glowRose 3s ease-in-out infinite; }
+.badge-sol { background: linear-gradient(135deg, #201008, #150a04); border: 1px solid #d4a03055; animation: glowGold 3s ease-in-out infinite; }
 .badge-icon { font-size: 28px; animation: drift 3s ease-in-out infinite; }
-.badge-title { font-size: 15px; margin-bottom: 2px; }
-.badge-sol .badge-title { color: #e8c030; }
-.badge-luna .badge-title { color: #60a8f0; }
+.badge-title { font-size: 17px; margin-bottom: 3px; }
+.badge-venus .badge-title { color: #e86070; text-shadow: 0 1px 6px #00000099; }
+.badge-sol .badge-title { color: #d4a030; text-shadow: 0 1px 6px #00000099; }
 .badge-sub { font-size: 12px; letter-spacing: 2px; font-weight: bold; }
-.badge-sol .badge-sub { color: #8a7020; }
-.badge-luna .badge-sub { color: #4070a0; }
+.badge-venus .badge-sub { color: #804050; }
+.badge-sol .badge-sub { color: #806020; }
 .tabs { display: flex; justify-content: center; margin-bottom: 24px; }
-.tab-btn { background: transparent; border: 1px solid #e8c03033; color: #e8f0ff; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
+.tab-btn { background: transparent; border: 1px solid #e8607033; color: #f0e8f5; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
 .tab-btn:first-child { border-radius: 4px 0 0 4px; }
 .tab-btn:last-child { border-radius: 0 4px 4px 0; }
-.tab-btn.active { background: #e8c03028; border-color: #e8c030; color: #e8c030; }
+.tab-btn.active { background: #e8607028; border-color: #e86070; color: #e86070; }
 .panel { display: none; }
 .panel.on { display: block; animation: floatUp .5s ease forwards; }
-.card { background: linear-gradient(135deg, #0e120844, #e8c03008); border: 1px solid #e8c03033; border-radius: 16px; padding: 20px; margin-bottom: 16px; }
-.card-label { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; font-weight: bold; }
-.label-yellow { color: #e8c030; }
-.label-blue { color: #60a8f0; }
-.label-teal { color: #30d8c0; }
-.card-body { font-size: 14px; line-height: 1.9; color: #b0b8d0; }
-.card-body strong { color: #e8c030; }
-.card-body em { color: #60a8f0; font-style: italic; }
-.card-body .teal { color: #30d8c0; }
-.card-left { border-left: 3px solid #e8c030; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #1a1808aa, #e8c03008); }
-.card-left-blue { border-left: 3px solid #60a8f0; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #081828aa, #60a8f008); }
-.quote { font-size: 15px; color: #e8c030; font-style: italic; line-height: 1.7; border-left: 2px solid #60a8f0; padding-left: 14px; margin-bottom: 16px; }
-.ciclo { background: #ffffff05; border: 1px dashed #e8c03033; border-radius: 10px; padding: 12px 16px; font-size: 12px; color: #304060; display: flex; align-items: flex-start; gap: 10px; }
-.ciclo strong { color: #e8c030; }
-.divider { border: none; border-top: 1px solid #e8c0301a; margin: 16px 0; }
+.card { background: linear-gradient(135deg, #1a081844, #e8607008); border: 1px solid #e8607033; border-radius: 16px; padding: 20px; margin-bottom: 16px; }
+.card-label { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
+.label-rose { color: #e86070; }
+.label-gold { color: #d4a030; }
+.label-teal { color: #30c8b0; }
+.card-body { font-size: 16px; line-height: 1.9; color: #c0a8c0; text-shadow: 0 1px 4px #00000088; }
+.card-body strong { color: #e86070; }
+.card-body em { color: #d4a030; font-style: italic; }
+.card-body .teal { color: #30c8b0; }
+.card-body .gold { color: #d4a030; }
+.card-left { border-left: 3px solid #e86070; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #200818aa, #e8607008); }
+.card-left-gold { border-left: 3px solid #d4a030; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #201008aa, #d4a03008); }
+.alerta { background: linear-gradient(135deg, #20100844, #d4a03008); border: 1px solid #d4a03044; border-radius: 14px; padding: 16px 18px; margin-bottom: 16px; }
+.alerta-label { font-size: 12px; letter-spacing: 4px; color: #d4a030; text-transform: uppercase; margin-bottom: 8px; font-weight: bold; }
+.alerta-body { font-size: 15px; line-height: 1.85; color: #c0a8c0; text-shadow: 0 1px 4px #00000088; }
+.alerta-body strong { color: #d4a030; }
+.quote { font-size: 17px; color: #e86070; text-shadow: 0 1px 6px #00000099; font-style: italic; line-height: 1.7; border-left: 2px solid #d4a030; padding-left: 14px; margin-bottom: 16px; }
+.ciclo { background: #ffffff05; border: 1px dashed #e8607033; border-radius: 10px; padding: 12px 16px; font-size: 12px; color: #5a3050; display: flex; align-items: flex-start; gap: 10px; }
+.ciclo strong { color: #e86070; }
+.divider { border: none; border-top: 1px solid #e860701a; margin: 16px 0; }
 .tarot-num { text-align: center; margin-bottom: 22px; }
-.tarot-num-lbl { font-size: 13px; color: #506080; letter-spacing: 2px; margin-bottom: 5px; }
-.tarot-num-val { font-size: 13px; color: #3a5070; }
-.tarot-num-val strong { color: #60a8f0; }
+.tarot-num-lbl { font-size: 13px; color: #5a3050; letter-spacing: 2px; margin-bottom: 5px; }
+.tarot-num-val { font-size: 13px; color: #3a2030; }
+.tarot-num-val strong { color: #e86070; }
 .card-back-wrap { text-align: center; }
-.card-back { width: 175px; height: 285px; margin: 0 auto 20px; background: linear-gradient(160deg, #060814, #0e1428, #060814); border: 2px solid #60a8f0; border-radius: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; animation: drift 3s ease-in-out infinite, glowBlue 2.5s ease-in-out infinite; position: relative; overflow: hidden; }
-.card-back::before { content:''; position:absolute; inset:8px; border:1px solid #60a8f022; border-radius:10px; pointer-events:none; }
+.card-back { width: 175px; height: 285px; margin: 0 auto 20px; background: linear-gradient(160deg, #0d0610, #1a0818, #0d0610); border: 2px solid #e86070; border-radius: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; animation: drift 3s ease-in-out infinite, glowRose 2.5s ease-in-out infinite; position: relative; overflow: hidden; }
+.card-back::before { content:''; position:absolute; inset:8px; border:1px solid #e8607022; border-radius:10px; pointer-events:none; }
 .card-back-icon { font-size: 46px; animation: pulse 2.5s ease-in-out infinite; }
-.card-back-lbl { font-size: 12px; letter-spacing: 3px; color: #60a8f0; font-weight: bold; text-transform: uppercase; }
-.card-back-hint { font-size: 12px; color: #304060; }
-.card-back-sub { font-size: 13px; color: #506080; font-style: italic; }
+.card-back-lbl { font-size: 12px; letter-spacing: 3px; color: #e86070; text-transform: uppercase; font-weight: bold; }
+.card-back-hint { font-size: 12px; color: #402030; }
+.card-back-sub { font-size: 13px; color: #5a3050; font-style: italic; }
 .card-front-wrap { animation: reveal .8s ease forwards; }
-.card-face { width: 175px; height: 285px; margin: 0 auto 26px; background: linear-gradient(160deg, #060814, #0e1428, #060814); border: 2px solid #e8c030; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 14px; animation: glowYellow 3s ease-in-out infinite; position: relative; overflow: hidden; }
-.card-face::before { content:''; position:absolute; inset:8px; border:1px solid #e8c03022; border-radius:10px; pointer-events:none; }
-.card-roman { font-size: 12px; letter-spacing: 3px; color: #e8c030; font-weight: bold; }
+.card-face { width: 175px; height: 285px; margin: 0 auto 26px; background: linear-gradient(160deg, #0d0610, #1a0818, #0d0610); border: 2px solid #d4a030; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 14px; animation: glowGold 3s ease-in-out infinite; position: relative; overflow: hidden; }
+.card-face::before { content:''; position:absolute; inset:8px; border:1px solid #d4a03022; border-radius:10px; pointer-events:none; }
+.card-roman { font-size: 12px; letter-spacing: 3px; color: #d4a030; font-weight: bold; }
 .card-art { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
 .card-main { font-size: 54px; animation: drift 3s ease-in-out infinite; }
 .card-orbs { display:flex; gap:10px; font-size:18px; }
-.card-name { font-size: 13px; letter-spacing: 2px; color: #e8c030; text-align:center; text-transform:uppercase; border-top: 1px solid #e8c03033; padding-top: 10px; width: 100%; }
-.card-info { background: linear-gradient(135deg, #0e120833, #e8c03008); border: 1px solid #e8c03033; border-radius: 14px; padding: 20px 18px; margin-bottom: 18px; }
+.card-name { font-size: 13px; letter-spacing: 2px; color: #d4a030; text-align:center; text-transform:uppercase; border-top: 1px solid #d4a03033; padding-top: 10px; width: 100%; }
+.card-info { background: linear-gradient(135deg, #1a081833, #e8607008); border: 1px solid #e8607033; border-radius: 14px; padding: 20px 18px; margin-bottom: 18px; }
 .card-info-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
-.card-info-title { font-size:17px; color:#e8c030; font-style:italic; }
-.card-info-badge { font-size:12px; letter-spacing:2px; color:#506080; font-weight:bold; }
-.card-info p { font-size:13.5px; line-height:1.9; color:#b0b8d0; }
+.card-info-title { font-size:19px; color:#d4a030; font-style:italic; }
+.card-info-badge { font-size:12px; letter-spacing:2px; color:#5a3050; font-weight:bold; }
+.card-info p { font-size:15px; line-height:1.9; color:#c0a8c0; text-shadow: 0 1px 4px #00000088; }
 .card-info p+p { margin-top:10px; }
-.card-info strong { color:#e8c030; }
-.card-info em { color:#60a8f0; }
+.card-info strong { color:#d4a030; }
+.card-info em { color:#e86070; }
 .keywords { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
-.kw { font-size:13px; letter-spacing:1px; padding:5px 12px; border:1px solid #60a8f044; border-radius:20px; color:#60a8f0; background:#60a8f010; }
-.reveal-btn { background: linear-gradient(135deg, #060814, #0e1428); border: 1px solid #e8c030; color: #e8c030; padding: 13px 38px; font-family:inherit; font-size:14px; letter-spacing:3px; text-transform:uppercase; cursor:pointer; border-radius:4px; animation: glowYellow 2.5s ease-in-out infinite; transition:transform .2s; display:block; margin:0 auto; }
+.kw { font-size:13px; letter-spacing:1px; padding:5px 12px; border:1px solid #e8607044; border-radius:20px; color:#e86070; background:#e8607010; }
+.reveal-btn { background: linear-gradient(135deg, #0d0610, #1a0818); border: 1px solid #d4a030; color: #d4a030; padding: 13px 38px; font-family:inherit; font-size:14px; letter-spacing:3px; text-transform:uppercase; cursor:pointer; border-radius:4px; animation: glowGold 2.5s ease-in-out infinite; transition:transform .2s; display:block; margin:0 auto; }
 .reveal-btn:hover { transform:scale(1.04); }
-.tarot-msg { background: linear-gradient(135deg, #e8c03011, #0e120833); border: 1px solid #e8c030; border-radius: 12px; padding: 18px 20px; text-align:center; font-size:15px; font-style:italic; color:#e8c030; letter-spacing:.5px; line-height:1.7; animation: msgIn .8s ease forwards; }
-.footer { text-align:center; margin-top:40px; font-size:12px; color:#182030; letter-spacing:3px; }
+.tarot-msg { background: linear-gradient(135deg, #d4a03011, #1a081833); border: 1px solid #d4a030; border-radius: 12px; padding: 18px 20px; text-align:center; font-size:17px; font-style:italic; color:#d4a030; letter-spacing:.5px; line-height:1.7; animation: msgIn .8s ease forwards; }
+.footer { text-align:center; margin-top:40px; font-size:12px; color:#1a0818; letter-spacing:3px; }
 </style>
 </head>
-<body style="background:#060814!important;min-height:100vh">
+<body style="background:#0d0610!important;min-height:100vh">
 <div id="bg"></div>
 <div id="stars"></div>
 <div class="wrapper">
   <div class="header">
-    <div class="header-date">✦ Jueves · 21 de mayo de 2026 ✦</div>
+    <div class="header-date">✦ Viernes · 22 de mayo de 2026 ✦</div>
     <h1 class="header-title">El Diario de los Astros</h1>
     <div class="header-sub">✧ · LECTURA DEL DÍA · ✧</div>
   </div>
 
-  <div class="badge-sol">
-    <div class="badge-icon">☀️</div>
-    <div>
-      <div class="badge-title">Sol ingresa en Géminis</div>
-      <div class="badge-sub">⟡ HOY · COMUNICACIÓN · IDEAS · MOVIMIENTO ⟡</div>
+  <div class="badges">
+    <div class="badge badge-venus">
+      <div class="badge-icon">🌙</div>
+      <div>
+        <div class="badge-title">Luna conjunción Venus en Cáncer</div>
+        <div class="badge-sub">⟡ EMOCIÓN · TERNURA · VÍNCULOS ⟡</div>
+      </div>
     </div>
-  </div>
-
-  <div class="badge-luna">
-    <div class="badge-icon">🌙</div>
-    <div>
-      <div class="badge-title">Luna en Cáncer con Venus</div>
-      <div class="badge-sub">⟡ EMOCIÓN · CUIDADO · SENSIBILIDAD ELEVADA ⟡</div>
+    <div class="badge badge-sol">
+      <div class="badge-icon">☀️</div>
+      <div>
+        <div class="badge-title">Sol en Géminis · Día 2</div>
+        <div class="badge-sub">⟡ MENTE ACTIVA · COMUNICACIÓN · IDEAS ⟡</div>
+      </div>
     </div>
   </div>
 
@@ -126,34 +133,34 @@ body { min-height: 100vh; background: #060814 !important; font-family: 'Palatino
   <div class="panel on" id="panel-astros">
 
     <div class="card">
-      <div class="card-label label-yellow">⟡ Sol ingresa en Géminis · Temporada de aire</div>
-      <div class="card-body"><strong>El Sol entra hoy en Géminis</strong> y con eso el mes cambia completamente de ritmo. Atrás queda la calma terrosa de Tauro. Ahora viene el movimiento, la curiosidad, el intercambio. <em>La mente se activa, las palabras fluyen, las conexiones se multiplican.</em> Esta temporada dura hasta el 22 de junio y es una de las más mentales y comunicativas del año.</div>
+      <div class="card-label label-rose">⟡ Luna conjunción Venus en Cáncer</div>
+      <div class="card-body">Hoy la <strong>Luna se une a Venus en Cáncer</strong> — dos energías femeninas y acuosas en el mismo punto del cielo. Esta conjunción eleva la sensibilidad emocional, la necesidad de cuidado y el deseo de profundidad en los vínculos. <em>Los afectos pesan más hoy. Lo que sentís tiene mucha información.</em> Es un día para escuchar el corazón sin apurarlo.</div>
     </div>
 
     <div class="card-left">
-      <div class="card-label label-yellow">⟡ Lo que activa la temporada Géminis</div>
-      <div class="card-body">Se activan temas vinculados con la comunicación, los vínculos, el aprendizaje, las redes y la capacidad de adaptarse a nuevas oportunidades. Será una etapa muy favorable para proyectos digitales, estudios, cursos, entrevistas y trabajos relacionados con tecnología. <strong>Hoy es el primer día de todo eso.</strong></div>
+      <div class="card-label label-rose">⟡ Cómo se siente esta energía</div>
+      <div class="card-body">Mayor necesidad de cercanía, de hogar, de pertenencia. Puede haber más sensibilidad ante lo que otros dicen o hacen — no es exageración, es Cáncer hablando. <strong>Este no es un día para forzar ni apurar nada</strong> en los vínculos. Es un día para nutrir lo que ya existe y reconocer lo que te importa de verdad.</div>
     </div>
 
     <div class="divider"></div>
 
     <div class="card">
-      <div class="card-label label-blue">⟡ Luna en Cáncer conjunción Venus</div>
-      <div class="card-body">Mientras el Sol activa la mente, la <strong>Luna transita Cáncer junto a Venus</strong> — y eso eleva la sensibilidad emocional. Hay una dualidad interesante hoy: <em>la cabeza quiere moverse rápido, el corazón pide ternura y cuidado.</em> No son opuestos — son complementos. El mejor Géminis es el que piensa con emoción.</div>
+      <div class="card-label label-gold">⟡ Sol en Géminis · La mente se despierta</div>
+      <div class="card-body">Mientras el corazón pide ternura, <span class="gold"><strong>el Sol en Géminis activa la mente</strong></span> — curiosidad, intercambio, movimiento. Hay una tensión creativa hoy entre sentir profundo y pensar rápido. <em>No hay que elegir entre los dos — los mejores Géminis sienten lo que piensan.</em></div>
     </div>
 
-    <div class="card-left-blue">
-      <div class="card-label label-blue">⟡ Urano en Géminis · El fondo del ciclo</div>
-      <div class="card-body">Esta temporada llega en medio del histórico ingreso de Urano en Géminis, un tránsito que muchos astrólogos relacionan con cambios profundos en la manera de pensar, comunicar y vincularse con el mundo. <strong>Lo que digas y pienses en estas semanas tiene más peso del que parece.</strong></div>
+    <div class="alerta">
+      <div class="alerta-label">⟡ En el horizonte · 25 de mayo</div>
+      <div class="alerta-body">Se aproxima la <strong>cuadratura Marte en Tauro ✕ Plutón retrógrado en Acuario</strong> — una de las más intensas del mes. Pueden surgir tensiones vinculadas al poder, la resistencia o transformaciones que se aceleran. Estos días son buenos para ir construyendo calma interna antes de que llegue esa energía.</div>
     </div>
 
     <div class="divider"></div>
 
-    <div class="quote">¿Qué necesitás decir que todavía no dijiste?</div>
+    <div class="quote">¿A quién podés decirle hoy lo que sentís?</div>
 
     <div class="ciclo">
-      <span style="font-size:18px">🌬️</span>
-      <span><strong>Temporada Géminis:</strong> 21 mayo → 22 junio. Temas que se activan: comunicación, aprendizaje, proyectos digitales, vínculos nuevos, ideas que cambian el rumbo.</span>
+      <span style="font-size:18px">🌹</span>
+      <span><strong>Luna conjunción Venus en Cáncer</strong> — la energía más amorosa y nutritiva del mes. Aprovechá para conectar con quienes querés, crear espacios de intimidad real y cuidarte desde adentro.</span>
     </div>
 
   </div>
@@ -161,12 +168,12 @@ body { min-height: 100vh; background: #060814 !important; font-family: 'Palatino
   <div class="panel" id="panel-tarot">
     <div class="tarot-num">
       <div class="tarot-num-lbl">CARTA NUMEROLÓGICA DEL DÍA</div>
-      <div class="tarot-num-val">2+1+0+5+2+0+2+6 = <strong>18 → La Luna</strong></div>
+      <div class="tarot-num-val">2+2+0+5+2+0+2+6 = <strong>19 → El Sol</strong></div>
     </div>
 
     <div id="back-wrap" class="card-back-wrap">
       <div class="card-back" onclick="flipCard()">
-        <div class="card-back-icon">🌙</div>
+        <div class="card-back-icon">☀️</div>
         <div class="card-back-lbl">Revelar</div>
         <div class="card-back-hint">toca la carta</div>
       </div>
@@ -175,26 +182,26 @@ body { min-height: 100vh; background: #060814 !important; font-family: 'Palatino
 
     <div id="front-wrap" class="card-front-wrap" style="display:none;">
       <div class="card-face">
-        <div class="card-roman">XVIII</div>
+        <div class="card-roman">XIX</div>
         <div class="card-art">
-          <div class="card-main">🌕</div>
+          <div class="card-main">☀️</div>
           <div class="card-orbs">
             <span style="animation:drift 3s .2s ease-in-out infinite">✦</span>
-            <span style="animation:drift 3s .5s ease-in-out infinite">☀️</span>
+            <span style="animation:drift 3s .5s ease-in-out infinite">🌙</span>
             <span style="animation:drift 3s .8s ease-in-out infinite">✦</span>
           </div>
           <div style="font-size:19px;animation:drift 3s .4s ease-in-out infinite">⟡</div>
         </div>
-        <div class="card-name">La Luna</div>
+        <div class="card-name">El Sol</div>
       </div>
 
       <div class="card-info">
         <div class="card-info-head">
-          <div class="card-info-title">La Luna · XVIII</div>
+          <div class="card-info-title">El Sol · XIX</div>
           <div class="card-info-badge">ARCANO MAYOR</div>
         </div>
-        <p>La carta de la <strong>intuición, el misterio y el mundo interior</strong>. La Luna aparece cuando algo no es del todo visible todavía — cuando hay que confiar en lo que se siente antes de lo que se ve. <em>En el primer día de Sol en Géminis, esta carta recuerda que no todo puede pensarse: algunas cosas hay que sentirlas.</em></p>
-        <p>La Luna y Géminis juntos hoy piden un equilibrio: <strong>usá la mente para explorar, pero escuchá la intuición para decidir.</strong> No todo lo que brilla es certeza. Y eso está bien.</p>
+        <p>La carta de la <strong>alegría, la vitalidad y la claridad</strong>. El Sol es el arcano más luminoso del tarot — no promete que todo es perfecto, sino que <em>hay luz suficiente para ver el camino</em>. Aparece hoy, en plena Luna-Venus en Cáncer, como un recordatorio de que el amor y el cuidado también son fuentes de energía.</p>
+        <p>El Sol en el tarot y en el cielo hoy dicen lo mismo: <strong>dejate brillar. Compartí lo que tenés para dar. No guardes la ternura para después.</strong></p>
       </div>
 
       <div class="keywords" id="kw-list"></div>
@@ -210,12 +217,12 @@ body { min-height: 100vh; background: #060814 !important; font-family: 'Palatino
 <script>
 const sc=document.getElementById('stars');
 for(let i=0;i<70;i++){const s=document.createElement('div');const sz=Math.random()*2.4+0.4;s.style.cssText='position:fixed;border-radius:50%;background:#fff;opacity:0;pointer-events:none;z-index:1;left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation:twinkle '+(Math.random()*3+2).toFixed(2)+'s '+(Math.random()*4).toFixed(2)+'s ease-in-out infinite;';sc.appendChild(s);}
-const kws=["Intuición","Misterio","Exploración","Sentir antes de pensar","Mundo interior","Umbral"];
+const kws=["Alegría","Vitalidad","Claridad","Amor","Calidez","Brillo propio"];
 const kl=document.getElementById('kw-list');
 kws.forEach((k)=>{const s=document.createElement('span');s.className='kw';s.textContent=k;kl.appendChild(s);});
 function switchTab(t){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById('panel-'+t).classList.add('on');document.getElementById('btn-'+t).classList.add('active');}
 function flipCard(){document.getElementById('back-wrap').style.display='none';document.getElementById('front-wrap').style.display='block';}
-const msgs=["La mente explora. La intuición decide.","Hoy empieza una nueva conversación con el mundo.","Hay cosas que solo se ven de noche.","Lo que sentís también es información valiosa.","Géminis pregunta. La Luna responde desde adentro."];
+const msgs=["Hoy el cielo te pide que te dejes querer.","La ternura también es una forma de fuerza.","Brillar no es presumir — es ser vos misma.","Lo que sentís hoy es información valiosa.","El Sol no se esconde. Tampoco vos."];
 let idx=0;
 function revealMsg(){showMsg(idx);setInterval(()=>{idx=(idx+1)%msgs.length;showMsg(idx);},3000);}
 function showMsg(i){document.getElementById('reveal-area').innerHTML='<div class="tarot-msg">✦ '+msgs[i]+' ✦</div>';}
