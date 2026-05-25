@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es" style="background:#0d0608!important;min-height:100vh">
+<html lang="es" style="background:#080408!important;min-height:100vh">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<title>El Diario de los Astros · 24 mayo 2026</title>
+<title>El Diario de los Astros · 25 mayo 2026</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { background: #0d0608 !important; }
-body { min-height: 100vh; background: #0d0608 !important; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #f0e8ec; }
-#bg { position: fixed; inset: 0; z-index: 0; background: radial-gradient(ellipse at 20% 8%, #280818 0%, #0d0608 45%, #060204 100%); }
+html { background: #080408 !important; }
+body { min-height: 100vh; background: #080408 !important; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #f0e8f5; }
+#bg { position: fixed; inset: 0; z-index: 0; background: radial-gradient(ellipse at 25% 8%, #200828 0%, #080408 45%, #040208 100%); }
 #stars { position: fixed; inset: 0; pointer-events: none; z-index: 1; }
 .wrapper { max-width: 500px; margin: 0 auto; padding: 36px 20px 70px; position: relative; z-index: 2; }
 @keyframes twinkle { 0%,100%{opacity:0;transform:scale(.8)} 50%{opacity:.9;transform:scale(1.2)} }
@@ -19,120 +19,110 @@ body { min-height: 100vh; background: #0d0608 !important; font-family: 'Palatino
 @keyframes pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
 @keyframes msgIn { 0%{opacity:0;transform:translateY(8px)} 100%{opacity:1;transform:translateY(0)} }
 @keyframes reveal { 0%{opacity:0;transform:rotateY(90deg)} 100%{opacity:1;transform:rotateY(0)} }
-@keyframes glowCrimson { 0%,100%{box-shadow:0 0 14px #c0304044,0 0 28px #c0304022} 50%{box-shadow:0 0 26px #c0304088,0 0 50px #c0304044} }
-@keyframes glowSilver { 0%,100%{box-shadow:0 0 14px #a0a8c044,0 0 28px #a0a8c022} 50%{box-shadow:0 0 26px #a0a8c088,0 0 50px #a0a8c044} }
-@keyframes tension { 0%,100%{transform:scale(1)} 50%{transform:scale(1.04)} }
+@keyframes glowPurple { 0%,100%{box-shadow:0 0 16px #9030c044,0 0 32px #9030c022} 50%{box-shadow:0 0 28px #9030c088,0 0 54px #9030c044} }
+@keyframes glowTeal { 0%,100%{box-shadow:0 0 14px #30a8c044,0 0 28px #30a8c022} 50%{box-shadow:0 0 26px #30a8c088,0 0 50px #30a8c044} }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-2px)} 75%{transform:translateX(2px)} }
 .header { text-align: center; margin-bottom: 26px; animation: floatUp .8s ease forwards; }
-.header-date { font-size: 12px; letter-spacing: 6px; color: #c03040; text-transform: uppercase; margin-bottom: 8px; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
-.header-title { font-size: 34px; font-weight: normal; font-style: italic; margin-bottom: 6px; background: linear-gradient(135deg, #c03040, #a0a8c0, #f0e8ec, #c03040); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
-.header-sub { font-size: 13px; color: #502030; letter-spacing: 3px; text-shadow: 0 1px 4px #00000088; }
-.alerta-banner { background: linear-gradient(135deg, #280810, #180408); border: 1px solid #c0304066; border-radius: 14px; padding: 16px 18px; margin-bottom: 18px; animation: glowCrimson 2s ease-in-out infinite; display: flex; align-items: center; gap: 14px; }
-.alerta-banner-icon { font-size: 32px; animation: tension 2s ease-in-out infinite; }
-.alerta-banner-text {}
-.alerta-banner-title { font-size: 16px; color: #e05060; font-weight: bold; margin-bottom: 4px; text-shadow: 0 1px 6px #00000099; }
-.alerta-banner-sub { font-size: 12px; color: #702030; letter-spacing: 2px; font-weight: bold; }
-.badges { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
-.badge { display: flex; align-items: center; gap: 12px; border-radius: 12px; padding: 13px 16px; }
-.badge-marte { background: linear-gradient(135deg, #200808, #150404); border: 1px solid #c0304044; }
-.badge-pluto { background: linear-gradient(135deg, #0e0818, #080410); border: 1px solid #a0a8c044; animation: glowSilver 3s ease-in-out infinite; }
+.header-date { font-size: 12px; letter-spacing: 6px; color: #b878d0; text-transform: uppercase; margin-bottom: 8px; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
+.header-title { font-size: 34px; font-weight: normal; font-style: italic; margin-bottom: 6px; background: linear-gradient(135deg, #9030c0, #e060a0, #f0e8f5, #9030c0); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
+.header-sub { font-size: 13px; color: #6a4878; letter-spacing: 3px; text-shadow: 0 1px 4px #00000088; }
+.evento-principal { background: linear-gradient(135deg, #200820, #120410); border: 2px solid #9030c077; border-radius: 14px; padding: 18px; margin-bottom: 16px; animation: glowPurple 2s ease-in-out infinite; }
+.evento-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.evento-icon { font-size: 34px; animation: shake 3s ease-in-out infinite; }
+.evento-title { font-size: 17px; color: #c080d8; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
+.evento-sub { font-size: 12px; color: #7a5090; letter-spacing: 2px; font-weight: bold; }
+.evento-body { font-size: 16px; line-height: 1.85; color: #c0a8d0; text-shadow: 0 1px 4px #00000088; }
+.evento-body strong { color: #c080d8; }
+.badge-trigono { display: flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #081820, #041010); border: 1px solid #30a8c055; border-radius: 12px; padding: 14px 16px; margin-bottom: 22px; animation: glowTeal 3s ease-in-out infinite; }
 .badge-icon { font-size: 26px; animation: drift 3s ease-in-out infinite; }
-.badge-title { font-size: 15px; margin-bottom: 3px; }
-.badge-marte .badge-title { color: #e05060; text-shadow: 0 1px 6px #00000099; }
-.badge-pluto .badge-title { color: #a0a8c0; text-shadow: 0 1px 6px #00000099; }
-.badge-sub { font-size: 12px; letter-spacing: 2px; font-weight: bold; }
-.badge-marte .badge-sub { color: #703040; }
-.badge-pluto .badge-sub { color: #506080; }
+.badge-title { font-size: 15px; color: #5abfa8; margin-bottom: 3px; text-shadow: 0 1px 6px #00000099; }
+.badge-sub { font-size: 12px; color: #3a7068; letter-spacing: 2px; font-weight: bold; }
 .tabs { display: flex; justify-content: center; margin-bottom: 24px; }
-.tab-btn { background: transparent; border: 1px solid #c0304033; color: #f0e8ec; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
+.tab-btn { background: transparent; border: 1px solid #9030c033; color: #f0e8f5; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
 .tab-btn:first-child { border-radius: 4px 0 0 4px; }
 .tab-btn:last-child { border-radius: 0 4px 4px 0; }
-.tab-btn.active { background: #c0304028; border-color: #c03040; color: #e05060; }
+.tab-btn.active { background: #9030c028; border-color: #a868c8; color: #b878d0; }
 .panel { display: none; }
 .panel.on { display: block; animation: floatUp .5s ease forwards; }
-.card { background: linear-gradient(135deg, #1e080c44, #c0304008); border: 1px solid #c0304033; border-radius: 16px; padding: 20px; margin-bottom: 16px; }
+.card { background: linear-gradient(135deg, #180828 44, #9030c008); border: 1px solid #9030c033; border-radius: 16px; padding: 20px; margin-bottom: 16px; }
 .card-label { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
-.label-crimson { color: #e05060; }
-.label-silver { color: #a0a8c0; }
-.label-gold { color: #c8a040; }
-.card-body { font-size: 16px; line-height: 1.9; color: #c0a8b0; text-shadow: 0 1px 4px #00000088; }
-.card-body strong { color: #e05060; }
-.card-body em { color: #a0a8c0; font-style: italic; }
-.card-body .gold { color: #c8a040; }
-.card-body .silver { color: #a0a8c0; }
-.card-left { border-left: 3px solid #c03040; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #20080caa, #c0304008); }
-.card-left-silver { border-left: 3px solid #a0a8c0; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #0e0818aa, #a0a8c008); }
+.label-purple { color: #b878d0; }
+.label-teal { color: #5abfa8; }
+.label-gold { color: #c8a870; }
+.card-body { font-size: 17px; line-height: 1.9; color: #b8a8c8; text-shadow: 0 1px 4px #00000088; }
+.card-body strong { color: #b878d0; }
+.card-body em { color: #5abfa8; font-style: italic; }
+.card-body .gold { color: #c8a870; }
+.card-body .teal { color: #5abfa8; }
+.card-left { border-left: 3px solid #9030c0; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #180828aa, #9030c008); }
+.card-left-teal { border-left: 3px solid #30a8c0; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #081820aa, #30a8c008); }
 .card-left-gold { border-left: 3px solid #c8a040; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #180c04aa, #c8a04008); }
-.quote { font-size: 17px; color: #a0a8c0; font-style: italic; line-height: 1.7; border-left: 2px solid #c03040; padding-left: 14px; margin-bottom: 16px; text-shadow: 0 1px 6px #00000099; }
-.ciclo { background: #ffffff05; border: 1px dashed #c0304033; border-radius: 10px; padding: 12px 16px; font-size: 13px; color: #502030; display: flex; align-items: flex-start; gap: 10px; text-shadow: 0 1px 4px #00000088; }
-.ciclo strong { color: #e05060; }
-.divider { border: none; border-top: 1px solid #c030401a; margin: 16px 0; }
+.quote { font-size: 18px; color: #c8a870; font-style: italic; line-height: 1.7; border-left: 2px solid #9030c0; padding-left: 14px; margin-bottom: 16px; text-shadow: 0 1px 6px #00000099; }
+.ciclo { background: #ffffff05; border: 1px dashed #9030c033; border-radius: 10px; padding: 12px 16px; font-size: 13px; color: #6a4878; display: flex; align-items: flex-start; gap: 10px; text-shadow: 0 1px 4px #00000088; }
+.ciclo strong { color: #b878d0; }
+.divider { border: none; border-top: 1px solid #9030c01a; margin: 16px 0; }
 .tarot-num { text-align: center; margin-bottom: 22px; }
-.tarot-num-lbl { font-size: 13px; color: #502030; letter-spacing: 2px; margin-bottom: 5px; text-shadow: 0 1px 4px #00000088; }
-.tarot-num-val { font-size: 13px; color: #301020; text-shadow: 0 1px 4px #00000088; }
-.tarot-num-val strong { color: #e05060; }
+.tarot-num-lbl { font-size: 13px; color: #6a4878; letter-spacing: 2px; margin-bottom: 5px; text-shadow: 0 1px 4px #00000088; }
+.tarot-num-val { font-size: 13px; color: #3a2858; text-shadow: 0 1px 4px #00000088; }
+.tarot-num-val strong { color: #b878d0; }
 .card-back-wrap { text-align: center; }
-.card-back { width: 175px; height: 285px; margin: 0 auto 20px; background: linear-gradient(160deg, #0d0608, #1e080c, #0d0608); border: 2px solid #a0a8c0; border-radius: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; animation: drift 3s ease-in-out infinite, glowSilver 2.5s ease-in-out infinite; position: relative; overflow: hidden; }
-.card-back::before { content:''; position:absolute; inset:8px; border:1px solid #a0a8c022; border-radius:10px; pointer-events:none; }
+.card-back { width: 175px; height: 285px; margin: 0 auto 20px; background: linear-gradient(160deg, #080408, #180820, #080408); border: 2px solid #9030c0; border-radius: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; animation: drift 3s ease-in-out infinite, glowPurple 2.5s ease-in-out infinite; position: relative; overflow: hidden; }
+.card-back::before { content:''; position:absolute; inset:8px; border:1px solid #9030c022; border-radius:10px; pointer-events:none; }
 .card-back-icon { font-size: 46px; animation: pulse 2.5s ease-in-out infinite; }
-.card-back-lbl { font-size: 12px; letter-spacing: 3px; color: #a0a8c0; text-transform: uppercase; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
-.card-back-hint { font-size: 12px; color: #302030; }
-.card-back-sub { font-size: 13px; color: #502030; font-style: italic; text-shadow: 0 1px 4px #00000088; }
+.card-back-lbl { font-size: 12px; letter-spacing: 3px; color: #b878d0; text-transform: uppercase; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
+.card-back-hint { font-size: 12px; color: #2a1040; }
+.card-back-sub { font-size: 13px; color: #6a4878; font-style: italic; text-shadow: 0 1px 4px #00000088; }
 .card-front-wrap { animation: reveal .8s ease forwards; }
-.card-face { width: 175px; height: 285px; margin: 0 auto 26px; background: linear-gradient(160deg, #0d0608, #1e080c, #0d0608); border: 2px solid #c8a040; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 14px; animation: glowCrimson 3s ease-in-out infinite; position: relative; overflow: hidden; }
+.card-face { width: 175px; height: 285px; margin: 0 auto 26px; background: linear-gradient(160deg, #080408, #180820, #080408); border: 2px solid #c8a040; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 14px; animation: glowPurple 3s ease-in-out infinite; position: relative; overflow: hidden; }
 .card-face::before { content:''; position:absolute; inset:8px; border:1px solid #c8a04022; border-radius:10px; pointer-events:none; }
-.card-roman { font-size: 12px; letter-spacing: 3px; color: #c8a040; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
+.card-roman { font-size: 12px; letter-spacing: 3px; color: #c8a870; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
 .card-art { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
 .card-main { font-size: 54px; animation: drift 3s ease-in-out infinite; }
 .card-orbs { display:flex; gap:10px; font-size:18px; }
-.card-name { font-size: 13px; letter-spacing: 2px; color: #c8a040; text-align:center; text-transform:uppercase; border-top: 1px solid #c8a04033; padding-top: 10px; width: 100%; text-shadow: 0 1px 6px #00000099; }
-.card-info { background: linear-gradient(135deg, #1e080c33, #c0304008); border: 1px solid #c0304033; border-radius: 14px; padding: 20px 18px; margin-bottom: 18px; }
+.card-name { font-size: 13px; letter-spacing: 2px; color: #c8a870; text-align:center; text-transform:uppercase; border-top: 1px solid #c8a04033; padding-top: 10px; width: 100%; text-shadow: 0 1px 6px #00000099; }
+.card-info { background: linear-gradient(135deg, #18082833, #9030c008); border: 1px solid #9030c033; border-radius: 14px; padding: 20px 18px; margin-bottom: 18px; }
 .card-info-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
 .card-info-title { font-size:19px; color:#c8a040; font-style:italic; text-shadow: 0 1px 6px #00000099; }
-.card-info-badge { font-size:12px; letter-spacing:2px; color:#502030; font-weight:bold; text-shadow: 0 1px 4px #00000088; }
-.card-info p { font-size:15px; line-height:1.9; color:#c0a8b0; text-shadow: 0 1px 4px #00000088; }
+.card-info-badge { font-size:12px; letter-spacing:2px; color:#4a2060; font-weight:bold; text-shadow: 0 1px 4px #00000088; }
+.card-info p { font-size:16px; line-height:1.9; color:#b8a8c8; text-shadow: 0 1px 4px #00000088; }
 .card-info p+p { margin-top:10px; }
 .card-info strong { color:#c8a040; }
-.card-info em { color:#a0a8c0; }
+.card-info em { color:#30c8a0; }
 .keywords { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
-.kw { font-size:13px; letter-spacing:1px; padding:5px 12px; border:1px solid #c0304044; border-radius:20px; color:#e05060; background:#c0304010; text-shadow: 0 1px 4px #00000088; }
-.reveal-btn { background: linear-gradient(135deg, #0d0608, #1e080c); border: 1px solid #c8a040; color: #c8a040; padding: 13px 38px; font-family:inherit; font-size:14px; letter-spacing:3px; text-transform:uppercase; cursor:pointer; border-radius:4px; animation: glowCrimson 2.5s ease-in-out infinite; transition:transform .2s; display:block; margin:0 auto; text-shadow: 0 1px 6px #00000099; }
+.kw { font-size:13px; letter-spacing:1px; padding:5px 12px; border:1px solid #9030c044; border-radius:20px; color:#c060e0; background:#9030c010; text-shadow: 0 1px 4px #00000088; }
+.reveal-btn { background: linear-gradient(135deg, #080408, #180820); border: 1px solid #c8a040; color: #c8a870; padding: 13px 38px; font-family:inherit; font-size:14px; letter-spacing:3px; text-transform:uppercase; cursor:pointer; border-radius:4px; animation: glowPurple 2.5s ease-in-out infinite; transition:transform .2s; display:block; margin:0 auto; text-shadow: 0 1px 6px #00000099; }
 .reveal-btn:hover { transform:scale(1.04); }
-.tarot-msg { background: linear-gradient(135deg, #c8a04011, #1e080c33); border: 1px solid #c8a040; border-radius: 12px; padding: 18px 20px; text-align:center; font-size:17px; font-style:italic; color:#c8a040; letter-spacing:.5px; line-height:1.7; animation: msgIn .8s ease forwards; text-shadow: 0 1px 6px #00000099; }
-.footer { text-align:center; margin-top:40px; font-size:12px; color:#1a0810; letter-spacing:3px; }
+.tarot-msg { background: linear-gradient(135deg, #c8a04011, #18082833); border: 1px solid #c8a040; border-radius: 12px; padding: 18px 20px; text-align:center; font-size:18px; font-style:italic; color:#c8a040; letter-spacing:.5px; line-height:1.7; animation: msgIn .8s ease forwards; text-shadow: 0 1px 6px #00000099; }
+.footer { text-align:center; margin-top:40px; font-size:12px; color:#100820; letter-spacing:3px; }
 </style>
 </head>
-<body style="background:#0d0608!important;min-height:100vh">
+<body style="background:#080408!important;min-height:100vh">
 <div id="bg"></div>
 <div id="stars"></div>
 <div class="wrapper">
+
   <div class="header">
-    <div class="header-date">✦ Domingo · 24 de mayo de 2026 ✦</div>
+    <div class="header-date">✦ Lunes · 25 de mayo de 2026 ✦</div>
     <h1 class="header-title">El Diario de los Astros</h1>
     <div class="header-sub">✧ · LECTURA DEL DÍA · ✧</div>
   </div>
 
-  <div class="alerta-banner">
-    <div class="alerta-banner-icon">⚡</div>
-    <div class="alerta-banner-text">
-      <div class="alerta-banner-title">Víspera de Marte cuadratura Plutón</div>
-      <div class="alerta-banner-sub">⟡ MAÑANA 25 MAYO · TENSIÓN EN ASCENSO ⟡</div>
+  <div class="evento-principal">
+    <div class="evento-top">
+      <div class="evento-icon">⚡</div>
+      <div>
+        <div class="evento-title">Marte ✕ Plutón · La cuadratura</div>
+        <div class="evento-sub">⟡ HOY · EL ASPECTO MÁS INTENSO DEL MES ⟡</div>
+      </div>
     </div>
+    <div class="evento-body"><strong>Marte en Tauro se cuadra con Plutón retrógrado en Acuario.</strong> Conflicto de poderes, resistencia al cambio y procesos de transformación forzada. Lo que no se dijo, lo que no se soltó, lo que se sostuvo por miedo — hoy puede salir a la superficie.</div>
   </div>
 
-  <div class="badges">
-    <div class="badge badge-marte">
-      <div class="badge-icon">♂</div>
-      <div>
-        <div class="badge-title">Marte en Tauro · acumulando fuerza</div>
-        <div class="badge-sub">⟡ TENSIÓN · RESISTENCIA · PODER INTERNO ⟡</div>
-      </div>
-    </div>
-    <div class="badge badge-pluto">
-      <div class="badge-icon">♇</div>
-      <div>
-        <div class="badge-title">Plutón retrógrado en Acuario</div>
-        <div class="badge-sub">⟡ TRANSFORMACIÓN · SOMBRA · REVISIÓN ⟡</div>
-      </div>
+  <div class="badge-trigono">
+    <div class="badge-icon">✨</div>
+    <div>
+      <div class="badge-title">Sol en Géminis trígono Plutón · el contrapeso</div>
+      <div class="badge-sub">⟡ TRANSFORMACIÓN CONSCIENTE · CONVERSACIONES PROFUNDAS ⟡</div>
     </div>
   </div>
 
@@ -144,34 +134,39 @@ body { min-height: 100vh; background: #0d0608 !important; font-family: 'Palatino
   <div class="panel on" id="panel-astros">
 
     <div class="card">
-      <div class="card-label label-crimson">⟡ La energía de hoy · víspera de la cuadratura</div>
-      <div class="card-body">Mañana <strong>Marte en Tauro forma cuadratura con Plutón retrógrado en Acuario</strong> — uno de los aspectos más intensos del mes. Hoy ya se siente esa energía en construcción: tensión interna, necesidad de control, resistencia ante lo que está cambiando. <em>No es un día para forzar ni confrontar. Es un día para prepararse desde adentro.</em></div>
+      <div class="card-label label-purple">⟡ Marte cuadratura Plutón · qué despierta</div>
+      <div class="card-body">Esta cuadratura puede sentirse como <strong>enojo contenido, agotamiento o sensación de estar sosteniendo demasiado</strong>. También puede traer necesidad de defender una posición o dinámicas de poder difíciles de manejar. No es un día para confrontaciones innecesarias — es un día para reconocer dónde está la presión y canalizarla conscientemente.</div>
     </div>
 
     <div class="card-left">
-      <div class="card-label label-crimson">⟡ Qué genera Marte cuadratura Plutón</div>
-      <div class="card-body">Esta combinación activa dinámicas de poder — con uno mismo y con los demás. Puede haber <strong>tensión en vínculos, necesidad de imponer la voluntad o miedo a perder el control</strong> de algo importante. La clave no es suprimir esa energía sino canalizarla: hacia el trabajo físico, hacia la transformación consciente, hacia soltar lo que ya no te sirve sostener.</div>
+      <div class="card-label label-purple">⟡ Cómo trabajarlo desde adentro</div>
+      <div class="card-body"><strong>Marte en Tauro</strong> tiene fuerza pero también terquedad. <strong>Plutón retrógrado</strong> pide revisar desde adentro — no imponer. La mejor salida de esta cuadratura no es la confrontación sino la <em>transformación consciente de lo que ya no podés seguir sosteniendo</em>. Soltá algo hoy. Aunque duela.</div>
     </div>
 
     <div class="divider"></div>
 
     <div class="card">
-      <div class="card-label label-silver">⟡ Plutón retrógrado · la sombra que revisita</div>
-      <div class="card-body"><span class="silver"><strong>Plutón retrógrado en Acuario</strong></span> invita a revisar estructuras internas de poder y control. ¿Dónde estás sosteniendo algo por miedo en lugar de por elección genuina? <em>La cuadratura con Marte puede hacer emerger justamente eso</em> — lo que venía guardado, lo que no terminó de transformarse. No es cómodo, pero es necesario.</div>
+      <div class="card-label label-teal">⟡ Sol trígono Plutón · la puerta de salida</div>
+      <div class="card-body">En simultáneo, <span class="teal"><strong>el Sol en Géminis forma un trígono con Plutón</strong></span> — un aspecto armonioso que abre una salida luminosa a toda esa tensión. <em>Este trígono favorece conversaciones profundas, cambios de pensamiento y comprensión psicológica.</em> Hablar, escribir, entender — son los antídotos de hoy.</div>
+    </div>
+
+    <div class="card-left-teal">
+      <div class="card-label label-teal">⟡ Mercurio en Géminis suma al trígono</div>
+      <div class="card-body"><span class="teal"><strong>Mercurio también está en Géminis</strong></span> y suma fluidez comunicativa. El trígono que se siente con Mercurio permite abrir conversaciones importantes que quizás venían pendientes. Si hay algo que aclarar en un vínculo, hoy tiene canal disponible para decirse.</div>
     </div>
 
     <div class="card-left-gold">
-      <div class="card-label label-gold">⟡ Cómo navegar estos días</div>
-      <div class="card-body">Con <span class="gold"><strong>Júpiter y Venus en Cáncer</strong></span> activos, el contrapeso emocional está disponible. El cuidado, los vínculos profundos y el hogar son anclas en medio de la tormenta. <strong>Buscá lo que te da seguridad real — no control, sino contención genuina.</strong> Respirá profundo. Mañana pasa.</div>
+      <div class="card-label label-gold">⟡ Venus en Cáncer · el abrazo de la noche</div>
+      <div class="card-body">Hacia la noche, el <span class="gold"><strong>trígono con Venus en Cáncer</strong></span> ayuda a suavizar algo del clima emocional y permite encontrar contención afectiva. Los vínculos cercanos son el refugio de hoy. No estés sola con la intensidad del día.</div>
     </div>
 
     <div class="divider"></div>
 
-    <div class="quote">¿Desde qué lugar estás usando tu fuerza hoy?</div>
+    <div class="quote">¿Qué estás sosteniendo que ya no es tuyo sostener?</div>
 
     <div class="ciclo">
       <span style="font-size:18px">🌪️</span>
-      <span>La <strong>cuadratura Marte-Plutón mañana 25</strong> es intensa pero breve. Lo que emerge en estos días muestra qué estructuras internas necesitan transformarse para que puedas avanzar con más libertad.</span>
+      <span>La tensión de hoy es <strong>parte del proceso de transformación</strong> que arrancó con la Luna Nueva del 16. Lo que sale a la superficie hoy es material para trabajar — no para suprimir.</span>
     </div>
 
   </div>
@@ -179,12 +174,12 @@ body { min-height: 100vh; background: #0d0608 !important; font-family: 'Palatino
   <div class="panel" id="panel-tarot">
     <div class="tarot-num">
       <div class="tarot-num-lbl">CARTA NUMEROLÓGICA DEL DÍA</div>
-      <div class="tarot-num-val">2+4+0+5+2+0+2+6 = <strong>21 → El Mundo</strong></div>
+      <div class="tarot-num-val">2+5+0+5+2+0+2+6 = <strong>22 → 4 → El Emperador</strong></div>
     </div>
 
     <div id="back-wrap" class="card-back-wrap">
       <div class="card-back" onclick="flipCard()">
-        <div class="card-back-icon">🌍</div>
+        <div class="card-back-icon">👑</div>
         <div class="card-back-lbl">Revelar</div>
         <div class="card-back-hint">toca la carta</div>
       </div>
@@ -193,9 +188,9 @@ body { min-height: 100vh; background: #0d0608 !important; font-family: 'Palatino
 
     <div id="front-wrap" class="card-front-wrap" style="display:none;">
       <div class="card-face">
-        <div class="card-roman">XXI</div>
+        <div class="card-roman">IV</div>
         <div class="card-art">
-          <div class="card-main">🌍</div>
+          <div class="card-main">👑</div>
           <div class="card-orbs">
             <span style="animation:drift 3s .2s ease-in-out infinite">✦</span>
             <span style="animation:drift 3s .5s ease-in-out infinite">⚡</span>
@@ -203,16 +198,16 @@ body { min-height: 100vh; background: #0d0608 !important; font-family: 'Palatino
           </div>
           <div style="font-size:19px;animation:drift 3s .4s ease-in-out infinite">⟡</div>
         </div>
-        <div class="card-name">El Mundo</div>
+        <div class="card-name">El Emperador</div>
       </div>
 
       <div class="card-info">
         <div class="card-info-head">
-          <div class="card-info-title">El Mundo · XXI</div>
+          <div class="card-info-title">El Emperador · IV</div>
           <div class="card-info-badge">ARCANO MAYOR</div>
         </div>
-        <p>La carta de la <strong>integración y el ciclo completo</strong>. El Mundo no promete que el camino fue fácil — promete que tiene sentido. Aparece hoy, en la víspera de una cuadratura intensa, como un recordatorio de que <em>todo lo que atravesás forma parte de un proceso más grande</em>.</p>
-        <p>La tensión de mañana no es el fin — es parte del ciclo. <strong>El Mundo te recuerda que estás más integrada de lo que creés.</strong> Lo que vivís tiene propósito. Confiá en el proceso aunque hoy se sienta incómodo.</p>
+        <p>La carta del <strong>poder, la autoridad y la estructura</strong>. El Emperador no es el que grita más fuerte — es el que mantiene la calma cuando todo tiembla. Aparece hoy, en plena cuadratura Marte-Plutón, como una invitación a ejercer el poder <em>desde la templanza, no desde el miedo o la reacción</em>.</p>
+        <p>La pregunta de El Emperador hoy es: <strong>¿desde qué lugar estás ejerciendo tu autoridad interna?</strong> Podés elegir reaccionar o podés elegir gobernar. La diferencia está en el espacio entre el estímulo y la respuesta.</p>
       </div>
 
       <div class="keywords" id="kw-list"></div>
@@ -228,12 +223,12 @@ body { min-height: 100vh; background: #0d0608 !important; font-family: 'Palatino
 <script>
 const sc=document.getElementById('stars');
 for(let i=0;i<70;i++){const s=document.createElement('div');const sz=Math.random()*2.4+0.4;s.style.cssText='position:fixed;border-radius:50%;background:#fff;opacity:0;pointer-events:none;z-index:1;left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation:twinkle '+(Math.random()*3+2).toFixed(2)+'s '+(Math.random()*4).toFixed(2)+'s ease-in-out infinite;';sc.appendChild(s);}
-const kws=["Integración","Ciclo completo","Transformación","Poder interno","Confianza","Todo tiene sentido"];
+const kws=["Poder interno","Templanza","Estructura","Autoridad consciente","Transformación","Gobernar desde adentro"];
 const kl=document.getElementById('kw-list');
 kws.forEach((k)=>{const s=document.createElement('span');s.className='kw';s.textContent=k;kl.appendChild(s);});
 function switchTab(t){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById('panel-'+t).classList.add('on');document.getElementById('btn-'+t).classList.add('active');}
 function flipCard(){document.getElementById('back-wrap').style.display='none';document.getElementById('front-wrap').style.display='block';}
-const msgs=["Lo que atravesás hoy tiene sentido mañana.","Tu fuerza no se agota — se transforma.","La tormenta pasa. Vos te quedás.","Integrar también es una forma de avanzar.","El mundo entero está dentro tuyo. Confiá."];
+const msgs=["Podés reaccionar o podés gobernar. Elegí.","Tu poder interno no necesita aprobación externa.","La calma también es una forma de fuerza.","Lo que soltás hoy te libera mañana.","Hay sabiduría en elegir cuándo actuar y cuándo esperar."];
 let idx=0;
 function revealMsg(){showMsg(idx);setInterval(()=>{idx=(idx+1)%msgs.length;showMsg(idx);},3000);}
 function showMsg(i){document.getElementById('reveal-area').innerHTML='<div class="tarot-msg">✦ '+msgs[i]+' ✦</div>';}
