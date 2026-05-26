@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es" style="background:#080408!important;min-height:100vh">
+<html lang="es" style="background:#080510!important;min-height:100vh">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<title>El Diario de los Astros · 25 mayo 2026</title>
+<title>El Diario de los Astros · 26 mayo 2026</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { background: #080408 !important; }
-body { min-height: 100vh; background: #080408 !important; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #f0e8f5; }
-#bg { position: fixed; inset: 0; z-index: 0; background: radial-gradient(ellipse at 25% 8%, #200828 0%, #080408 45%, #040208 100%); }
+html { background: #080510 !important; }
+body { min-height: 100vh; background: #080510 !important; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #f0eaf8; }
+#bg { position: fixed; inset: 0; z-index: 0; background: radial-gradient(ellipse at 20% 8%, #180828 0%, #080510 45%, #040308 100%); }
 #stars { position: fixed; inset: 0; pointer-events: none; z-index: 1; }
 .wrapper { max-width: 500px; margin: 0 auto; padding: 36px 20px 70px; position: relative; z-index: 2; }
 @keyframes twinkle { 0%,100%{opacity:0;transform:scale(.8)} 50%{opacity:.9;transform:scale(1.2)} }
@@ -19,92 +19,94 @@ body { min-height: 100vh; background: #080408 !important; font-family: 'Palatino
 @keyframes pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
 @keyframes msgIn { 0%{opacity:0;transform:translateY(8px)} 100%{opacity:1;transform:translateY(0)} }
 @keyframes reveal { 0%{opacity:0;transform:rotateY(90deg)} 100%{opacity:1;transform:rotateY(0)} }
-@keyframes glowPurple { 0%,100%{box-shadow:0 0 16px #9030c044,0 0 32px #9030c022} 50%{box-shadow:0 0 28px #9030c088,0 0 54px #9030c044} }
-@keyframes glowTeal { 0%,100%{box-shadow:0 0 14px #30a8c044,0 0 28px #30a8c022} 50%{box-shadow:0 0 26px #30a8c088,0 0 50px #30a8c044} }
-@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-2px)} 75%{transform:translateX(2px)} }
+@keyframes glowGarnet { 0%,100%{box-shadow:0 0 14px #90204044,0 0 28px #90204022} 50%{box-shadow:0 0 26px #90204088,0 0 50px #90204044} }
+@keyframes glowSilver { 0%,100%{box-shadow:0 0 14px #a0a8c044,0 0 28px #a0a8c022} 50%{box-shadow:0 0 26px #a0a8c088,0 0 50px #a0a8c044} }
+@keyframes glowGold { 0%,100%{box-shadow:0 0 14px #c8a04044,0 0 28px #c8a04022} 50%{box-shadow:0 0 26px #c8a04088,0 0 50px #c8a04044} }
 .header { text-align: center; margin-bottom: 26px; animation: floatUp .8s ease forwards; }
-.header-date { font-size: 12px; letter-spacing: 6px; color: #b878d0; text-transform: uppercase; margin-bottom: 8px; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
-.header-title { font-size: 34px; font-weight: normal; font-style: italic; margin-bottom: 6px; background: linear-gradient(135deg, #9030c0, #e060a0, #f0e8f5, #9030c0); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
-.header-sub { font-size: 13px; color: #6a4878; letter-spacing: 3px; text-shadow: 0 1px 4px #00000088; }
-.evento-principal { background: linear-gradient(135deg, #200820, #120410); border: 2px solid #9030c077; border-radius: 14px; padding: 18px; margin-bottom: 16px; animation: glowPurple 2s ease-in-out infinite; }
-.evento-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-.evento-icon { font-size: 34px; animation: shake 3s ease-in-out infinite; }
-.evento-title { font-size: 17px; color: #c080d8; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
-.evento-sub { font-size: 12px; color: #7a5090; letter-spacing: 2px; font-weight: bold; }
-.evento-body { font-size: 16px; line-height: 1.85; color: #c0a8d0; text-shadow: 0 1px 4px #00000088; }
-.evento-body strong { color: #c080d8; }
-.badge-trigono { display: flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #081820, #041010); border: 1px solid #30a8c055; border-radius: 12px; padding: 14px 16px; margin-bottom: 22px; animation: glowTeal 3s ease-in-out infinite; }
-.badge-icon { font-size: 26px; animation: drift 3s ease-in-out infinite; }
-.badge-title { font-size: 15px; color: #5abfa8; margin-bottom: 3px; text-shadow: 0 1px 6px #00000099; }
-.badge-sub { font-size: 12px; color: #3a7068; letter-spacing: 2px; font-weight: bold; }
+.header-date { font-size: 12px; letter-spacing: 6px; color: #a86888; text-transform: uppercase; margin-bottom: 8px; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
+.header-title { font-size: 34px; font-weight: normal; font-style: italic; margin-bottom: 6px; background: linear-gradient(135deg, #902040, #c888a8, #f0eaf8, #902040); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
+.header-sub { font-size: 13px; color: #4a2838; letter-spacing: 3px; text-shadow: 0 1px 4px #00000088; }
+.como-leer { background: #90204010; border: 1px solid #a8688844; border-radius: 12px; margin-bottom: 22px; overflow: hidden; }
+.como-leer-btn { width: 100%; background: transparent; border: none; color: #a86888; font-family: inherit; font-size: 13px; letter-spacing: 2px; padding: 13px 18px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left; text-shadow: 0 1px 4px #00000088; }
+.como-leer-btn span { font-size: 16px; transition: transform 0.3s; }
+.como-leer-btn.abierto span { transform: rotate(180deg); }
+.como-leer-body { display: none; padding: 0 18px 16px; font-size: 14px; line-height: 1.85; color: #b0a0b8; text-shadow: 0 1px 4px #00000088; }
+.como-leer-body.visible { display: block; animation: floatUp 0.3s ease forwards; }
+.como-leer-body p+p { margin-top: 10px; }
+.como-leer-body strong { color: #a86888; }
+.badges { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+.badge { display: flex; align-items: center; gap: 12px; border-radius: 12px; padding: 14px 16px; }
+.badge-luna { background: linear-gradient(135deg, #180820, #0e0415); border: 1px solid #90204055; animation: glowGarnet 3s ease-in-out infinite; }
+.badge-llena { background: linear-gradient(135deg, #181008, #100c04); border: 1px solid #c8a04055; animation: glowGold 3s ease-in-out infinite; }
+.badge-icon { font-size: 28px; animation: drift 3s ease-in-out infinite; }
+.badge-title { font-size: 15px; margin-bottom: 3px; }
+.badge-luna .badge-title { color: #c88898; text-shadow: 0 1px 6px #00000099; }
+.badge-llena .badge-title { color: #c8a040; text-shadow: 0 1px 6px #00000099; }
+.badge-sub { font-size: 12px; letter-spacing: 2px; font-weight: bold; }
+.badge-luna .badge-sub { color: #6a3848; }
+.badge-llena .badge-sub { color: #806820; }
 .tabs { display: flex; justify-content: center; margin-bottom: 24px; }
-.tab-btn { background: transparent; border: 1px solid #9030c033; color: #f0e8f5; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
+.tab-btn { background: transparent; border: 1px solid #90204033; color: #f0eaf8; padding: 8px 22px; cursor: pointer; font-family: inherit; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; transition: all .3s; }
 .tab-btn:first-child { border-radius: 4px 0 0 4px; }
 .tab-btn:last-child { border-radius: 0 4px 4px 0; }
-.tab-btn.active { background: #9030c028; border-color: #a868c8; color: #b878d0; }
+.tab-btn.active { background: #90204028; border-color: #902040; color: #c88898; }
 .panel { display: none; }
 .panel.on { display: block; animation: floatUp .5s ease forwards; }
-.card { background: linear-gradient(135deg, #180828 44, #9030c008); border: 1px solid #9030c033; border-radius: 16px; padding: 20px; margin-bottom: 16px; }
+.card { background: linear-gradient(135deg, #18082044, #90204008); border: 1px solid #90204033; border-radius: 16px; padding: 20px; margin-bottom: 16px; }
 .card-label { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
-.label-purple { color: #b878d0; }
-.label-teal { color: #5abfa8; }
-.label-gold { color: #c8a870; }
-.card-body { font-size: 17px; line-height: 1.9; color: #b8a8c8; text-shadow: 0 1px 4px #00000088; }
-.card-body strong { color: #b878d0; }
-.card-body em { color: #5abfa8; font-style: italic; }
-.card-body .gold { color: #c8a870; }
-.card-body .teal { color: #5abfa8; }
-.card-left { border-left: 3px solid #9030c0; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #180828aa, #9030c008); }
-.card-left-teal { border-left: 3px solid #30a8c0; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #081820aa, #30a8c008); }
-.card-left-gold { border-left: 3px solid #c8a040; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #180c04aa, #c8a04008); }
-.quote { font-size: 18px; color: #c8a870; font-style: italic; line-height: 1.7; border-left: 2px solid #9030c0; padding-left: 14px; margin-bottom: 16px; text-shadow: 0 1px 6px #00000099; }
-.ciclo { background: #ffffff05; border: 1px dashed #9030c033; border-radius: 10px; padding: 12px 16px; font-size: 13px; color: #6a4878; display: flex; align-items: flex-start; gap: 10px; text-shadow: 0 1px 4px #00000088; }
-.ciclo strong { color: #b878d0; }
-.divider { border: none; border-top: 1px solid #9030c01a; margin: 16px 0; }
+.label-garnet { color: #c88898; }
+.label-silver { color: #a8a8c8; }
+.label-gold { color: #c8a040; }
+.label-teal { color: #50b8a0; }
+.card-body { font-size: 17px; line-height: 1.9; color: #c0a8b8; text-shadow: 0 1px 4px #00000088; }
+.card-body strong { color: #c88898; }
+.card-body em { color: #a8a8c8; font-style: italic; }
+.card-body .gold { color: #c8a040; }
+.card-body .teal { color: #50b8a0; }
+.card-left { border-left: 3px solid #902040; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #180820aa, #90204008); }
+.card-left-silver { border-left: 3px solid #a0a8c0; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #101020aa, #a0a8c008); }
+.card-left-gold { border-left: 3px solid #c8a040; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #181008aa, #c8a04008); }
+.card-left-teal { border-left: 3px solid #50b8a0; border-radius: 0 12px 12px 0; padding: 18px; margin-bottom: 16px; background: linear-gradient(135deg, #081818aa, #50b8a008); }
+.quote { font-size: 18px; color: #c8a040; font-style: italic; line-height: 1.7; border-left: 2px solid #902040; padding-left: 14px; margin-bottom: 16px; text-shadow: 0 1px 6px #00000099; }
+.ciclo { background: #ffffff05; border: 1px dashed #90204033; border-radius: 10px; padding: 12px 16px; font-size: 13px; color: #4a2838; display: flex; align-items: flex-start; gap: 10px; text-shadow: 0 1px 4px #00000088; }
+.ciclo strong { color: #c88898; }
+.divider { border: none; border-top: 1px solid #9020401a; margin: 16px 0; }
 .tarot-num { text-align: center; margin-bottom: 22px; }
-.tarot-num-lbl { font-size: 13px; color: #6a4878; letter-spacing: 2px; margin-bottom: 5px; text-shadow: 0 1px 4px #00000088; }
-.tarot-num-val { font-size: 13px; color: #3a2858; text-shadow: 0 1px 4px #00000088; }
-.tarot-num-val strong { color: #b878d0; }
+.tarot-num-lbl { font-size: 13px; color: #4a2838; letter-spacing: 2px; margin-bottom: 5px; text-shadow: 0 1px 4px #00000088; }
+.tarot-num-val { font-size: 13px; color: #2a1020; text-shadow: 0 1px 4px #00000088; }
+.tarot-num-val strong { color: #c88898; }
 .card-back-wrap { text-align: center; }
-.card-back { width: 175px; height: 285px; margin: 0 auto 20px; background: linear-gradient(160deg, #080408, #180820, #080408); border: 2px solid #9030c0; border-radius: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; animation: drift 3s ease-in-out infinite, glowPurple 2.5s ease-in-out infinite; position: relative; overflow: hidden; }
-.card-back::before { content:''; position:absolute; inset:8px; border:1px solid #9030c022; border-radius:10px; pointer-events:none; }
+.card-back { width: 175px; height: 285px; margin: 0 auto 20px; background: linear-gradient(160deg, #080510, #180820, #080510); border: 2px solid #902040; border-radius: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; animation: drift 3s ease-in-out infinite, glowGarnet 2.5s ease-in-out infinite; position: relative; overflow: hidden; }
+.card-back::before { content:''; position:absolute; inset:8px; border:1px solid #90204022; border-radius:10px; pointer-events:none; }
 .card-back-icon { font-size: 46px; animation: pulse 2.5s ease-in-out infinite; }
-.card-back-lbl { font-size: 12px; letter-spacing: 3px; color: #b878d0; text-transform: uppercase; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
-.card-back-hint { font-size: 12px; color: #2a1040; }
-.card-back-sub { font-size: 13px; color: #6a4878; font-style: italic; text-shadow: 0 1px 4px #00000088; }
+.card-back-lbl { font-size: 12px; letter-spacing: 3px; color: #c88898; text-transform: uppercase; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
+.card-back-hint { font-size: 12px; color: #2a1020; }
+.card-back-sub { font-size: 13px; color: #4a2838; font-style: italic; text-shadow: 0 1px 4px #00000088; }
 .card-front-wrap { animation: reveal .8s ease forwards; }
-.card-face { width: 175px; height: 285px; margin: 0 auto 26px; background: linear-gradient(160deg, #080408, #180820, #080408); border: 2px solid #c8a040; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 14px; animation: glowPurple 3s ease-in-out infinite; position: relative; overflow: hidden; }
+.card-face { width: 175px; height: 285px; margin: 0 auto 26px; background: linear-gradient(160deg, #080510, #180820, #080510); border: 2px solid #c8a040; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 14px; animation: glowGold 3s ease-in-out infinite; position: relative; overflow: hidden; }
 .card-face::before { content:''; position:absolute; inset:8px; border:1px solid #c8a04022; border-radius:10px; pointer-events:none; }
-.card-roman { font-size: 12px; letter-spacing: 3px; color: #c8a870; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
+.card-roman { font-size: 12px; letter-spacing: 3px; color: #c8a040; font-weight: bold; text-shadow: 0 1px 6px #00000099; }
 .card-art { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
 .card-main { font-size: 54px; animation: drift 3s ease-in-out infinite; }
 .card-orbs { display:flex; gap:10px; font-size:18px; }
-.card-name { font-size: 13px; letter-spacing: 2px; color: #c8a870; text-align:center; text-transform:uppercase; border-top: 1px solid #c8a04033; padding-top: 10px; width: 100%; text-shadow: 0 1px 6px #00000099; }
-.card-info { background: linear-gradient(135deg, #18082833, #9030c008); border: 1px solid #9030c033; border-radius: 14px; padding: 20px 18px; margin-bottom: 18px; }
+.card-name { font-size: 13px; letter-spacing: 2px; color: #c8a040; text-align:center; text-transform:uppercase; border-top: 1px solid #c8a04033; padding-top: 10px; width: 100%; text-shadow: 0 1px 6px #00000099; }
+.card-info { background: linear-gradient(135deg, #18082033, #90204008); border: 1px solid #90204033; border-radius: 14px; padding: 20px 18px; margin-bottom: 18px; }
 .card-info-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
 .card-info-title { font-size:19px; color:#c8a040; font-style:italic; text-shadow: 0 1px 6px #00000099; }
-.card-info-badge { font-size:12px; letter-spacing:2px; color:#4a2060; font-weight:bold; text-shadow: 0 1px 4px #00000088; }
-.card-info p { font-size:16px; line-height:1.9; color:#b8a8c8; text-shadow: 0 1px 4px #00000088; }
+.card-info-badge { font-size:12px; letter-spacing:2px; color:#4a2838; font-weight:bold; text-shadow: 0 1px 4px #00000088; }
+.card-info p { font-size:16px; line-height:1.9; color:#c0a8b8; text-shadow: 0 1px 4px #00000088; }
 .card-info p+p { margin-top:10px; }
 .card-info strong { color:#c8a040; }
-.card-info em { color:#30c8a0; }
+.card-info em { color:#a8a8c8; }
 .keywords { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
-.kw { font-size:13px; letter-spacing:1px; padding:5px 12px; border:1px solid #9030c044; border-radius:20px; color:#c060e0; background:#9030c010; text-shadow: 0 1px 4px #00000088; }
-.reveal-btn { background: linear-gradient(135deg, #080408, #180820); border: 1px solid #c8a040; color: #c8a870; padding: 13px 38px; font-family:inherit; font-size:14px; letter-spacing:3px; text-transform:uppercase; cursor:pointer; border-radius:4px; animation: glowPurple 2.5s ease-in-out infinite; transition:transform .2s; display:block; margin:0 auto; text-shadow: 0 1px 6px #00000099; }
+.kw { font-size:13px; letter-spacing:1px; padding:5px 12px; border:1px solid #90204044; border-radius:20px; color:#c88898; background:#90204010; text-shadow: 0 1px 4px #00000088; }
+.reveal-btn { background: linear-gradient(135deg, #080510, #180820); border: 1px solid #c8a040; color: #c8a040; padding: 13px 38px; font-family:inherit; font-size:14px; letter-spacing:3px; text-transform:uppercase; cursor:pointer; border-radius:4px; animation: glowGold 2.5s ease-in-out infinite; transition:transform .2s; display:block; margin:0 auto; text-shadow: 0 1px 6px #00000099; }
 .reveal-btn:hover { transform:scale(1.04); }
-.tarot-msg { background: linear-gradient(135deg, #c8a04011, #18082833); border: 1px solid #c8a040; border-radius: 12px; padding: 18px 20px; text-align:center; font-size:18px; font-style:italic; color:#c8a040; letter-spacing:.5px; line-height:1.7; animation: msgIn .8s ease forwards; text-shadow: 0 1px 6px #00000099; }
-.footer { text-align:center; margin-top:40px; font-size:12px; color:#100820; letter-spacing:3px; }
-.como-leer { background: #9030c010; border: 1px solid #a868c844; border-radius: 12px; margin-bottom: 22px; overflow: hidden; }
-.como-leer-btn { width: 100%; background: transparent; border: none; color: #b878d0; font-family: inherit; font-size: 13px; letter-spacing: 2px; padding: 13px 18px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left; text-shadow: 0 1px 4px #00000088; }
-.como-leer-btn span { font-size: 16px; transition: transform 0.3s; }
-.como-leer-btn.abierto span { transform: rotate(180deg); }
-.como-leer-body { display: none; padding: 0 18px 16px; font-size: 14px; line-height: 1.85; color: #b0a0c0; text-shadow: 0 1px 4px #00000088; }
-.como-leer-body.visible { display: block; animation: floatUp 0.3s ease forwards; }
-.como-leer-body p+p { margin-top: 10px; }
-.como-leer-body strong { color: #b878d0; }
+.tarot-msg { background: linear-gradient(135deg, #c8a04011, #18082033); border: 1px solid #c8a040; border-radius: 12px; padding: 18px 20px; text-align:center; font-size:18px; font-style:italic; color:#c8a040; letter-spacing:.5px; line-height:1.7; animation: msgIn .8s ease forwards; text-shadow: 0 1px 6px #00000099; }
+.footer { text-align:center; margin-top:40px; font-size:12px; color:#100818; letter-spacing:3px; }
 </style>
 </head>
-<body style="background:#080408!important;min-height:100vh">
+<body style="background:#080510!important;min-height:100vh">
 <div id="bg"></div>
 <div id="stars"></div>
 <div class="wrapper">
@@ -121,27 +123,25 @@ body { min-height: 100vh; background: #080408 !important; font-family: 'Palatino
   </div>
 
   <div class="header">
-    <div class="header-date">✦ Lunes · 25 de mayo de 2026 ✦</div>
+    <div class="header-date">✦ Martes · 26 de mayo de 2026 ✦</div>
     <h1 class="header-title">El Diario de los Astros</h1>
     <div class="header-sub">✧ · LECTURA DEL DÍA · ✧</div>
   </div>
 
-  <div class="evento-principal">
-    <div class="evento-top">
-      <div class="evento-icon">⚡</div>
+  <div class="badges">
+    <div class="badge badge-luna">
+      <div class="badge-icon">🌒</div>
       <div>
-        <div class="evento-title">Marte ✕ Plutón · La cuadratura</div>
-        <div class="evento-sub">⟡ HOY · EL ASPECTO MÁS INTENSO DEL MES ⟡</div>
+        <div class="badge-title">Luna en Escorpio · después de la tormenta</div>
+        <div class="badge-sub">⟡ PROFUNDIDAD · SOLTAR · TRANSFORMACIÓN ⟡</div>
       </div>
     </div>
-    <div class="evento-body"><strong>Marte en Tauro se cuadra con Plutón retrógrado en Acuario.</strong> Conflicto de poderes, resistencia al cambio y procesos de transformación forzada. Lo que no se dijo, lo que no se soltó, lo que se sostuvo por miedo — hoy puede salir a la superficie.</div>
-  </div>
-
-  <div class="badge-trigono">
-    <div class="badge-icon">✨</div>
-    <div>
-      <div class="badge-title">Sol en Géminis trígono Plutón · el contrapeso</div>
-      <div class="badge-sub">⟡ TRANSFORMACIÓN CONSCIENTE · CONVERSACIONES PROFUNDAS ⟡</div>
+    <div class="badge badge-llena">
+      <div class="badge-icon">🌕</div>
+      <div>
+        <div class="badge-title">Luna Llena en Sagitario · se aproxima</div>
+        <div class="badge-sub">⟡ EL 31 MAYO · EXPANSIÓN · VERDAD ⟡</div>
+      </div>
     </div>
   </div>
 
@@ -153,39 +153,39 @@ body { min-height: 100vh; background: #080408 !important; font-family: 'Palatino
   <div class="panel on" id="panel-astros">
 
     <div class="card">
-      <div class="card-label label-purple">⟡ Marte cuadratura Plutón · qué despierta</div>
-      <div class="card-body">Esta cuadratura puede sentirse como <strong>enojo contenido, agotamiento o sensación de estar sosteniendo demasiado</strong>. También puede traer necesidad de defender una posición o dinámicas de poder difíciles de manejar. No es un día para confrontaciones innecesarias — es un día para reconocer dónde está la presión y canalizarla conscientemente.</div>
+      <div class="card-label label-garnet">⟡ Luna en Escorpio · la calma después</div>
+      <div class="card-body">Después de la intensidad de ayer con la cuadratura Marte-Plutón, hoy la <strong>Luna transita Escorpio</strong> — y aunque Escorpio no es un signo ligero, trae consigo la capacidad de <em>procesar lo vivido desde las profundidades</em>. No es un día para analizar racionalmente lo que pasó — es un día para sentirlo, dejarlo bajar y empezar a soltar.</div>
     </div>
 
     <div class="card-left">
-      <div class="card-label label-purple">⟡ Cómo trabajarlo desde adentro</div>
-      <div class="card-body"><strong>Marte en Tauro</strong> tiene fuerza pero también terquedad. <strong>Plutón retrógrado</strong> pide revisar desde adentro — no imponer. La mejor salida de esta cuadratura no es la confrontación sino la <em>transformación consciente de lo que ya no podés seguir sosteniendo</em>. Soltá algo hoy. Aunque duela.</div>
+      <div class="card-label label-garnet">⟡ Lo que Escorpio pide hoy</div>
+      <div class="card-body">Honestidad interna. <strong>Luna en Escorpio no acepta medias tintas</strong> — si algo salió a la superficie ayer, hoy pide ser reconocido sin juzgarlo. ¿Qué emoción quedó flotando después de la cuadratura? ¿Enojo, agotamiento, alivio? <em>Nombrarla ya es una forma de transformarla.</em></div>
     </div>
 
     <div class="divider"></div>
 
     <div class="card">
-      <div class="card-label label-teal">⟡ Sol trígono Plutón · la puerta de salida</div>
-      <div class="card-body">En simultáneo, <span class="teal"><strong>el Sol en Géminis forma un trígono con Plutón</strong></span> — un aspecto armonioso que abre una salida luminosa a toda esa tensión. <em>Este trígono favorece conversaciones profundas, cambios de pensamiento y comprensión psicológica.</em> Hablar, escribir, entender — son los antídotos de hoy.</div>
+      <div class="card-label label-gold">⟡ Luna Llena en Sagitario · el 31 se acerca</div>
+      <div class="card-body">En cinco días llega la <span class="gold"><strong>Luna Llena en Sagitario</strong></span> — una lunación de expansión, verdad y búsqueda de sentido. Es la culminación del ciclo que arrancó con la Luna Nueva en Tauro del 16. <em>Lo que hoy procesás emocionalmente en Escorpio va a ser el material que iluminará esa Luna Llena.</em> Estos días son de preparación interna.</div>
     </div>
 
     <div class="card-left-teal">
-      <div class="card-label label-teal">⟡ Mercurio en Géminis suma al trígono</div>
-      <div class="card-body"><span class="teal"><strong>Mercurio también está en Géminis</strong></span> y suma fluidez comunicativa. El trígono que se siente con Mercurio permite abrir conversaciones importantes que quizás venían pendientes. Si hay algo que aclarar en un vínculo, hoy tiene canal disponible para decirse.</div>
+      <div class="card-label label-teal">⟡ Sol en Géminis · la mente busca sentido</div>
+      <div class="card-body">El <span class="teal"><strong>Sol en Géminis</strong></span> sigue activo — y con la Luna en Escorpio, hay una tensión interesante entre querer entender todo racionalmente y la necesidad de simplemente sentir. <em>Hoy no todo tiene que tener una explicación. Algunas cosas simplemente se sienten</em> y eso alcanza.</div>
     </div>
 
     <div class="card-left-gold">
-      <div class="card-label label-gold">⟡ Venus en Cáncer · el abrazo de la noche</div>
-      <div class="card-body">Hacia la noche, el <span class="gold"><strong>trígono con Venus en Cáncer</strong></span> ayuda a suavizar algo del clima emocional y permite encontrar contención afectiva. Los vínculos cercanos son el refugio de hoy. No estés sola con la intensidad del día.</div>
+      <div class="card-label label-gold">⟡ Júpiter y Venus en Cáncer · el abrazo sigue</div>
+      <div class="card-body"><span class="gold"><strong>Júpiter y Venus en Cáncer</strong></span> continúan ofreciendo ese contrapeso emocional generoso. El cuidado, los vínculos profundos y el hogar siguen siendo el ancla. <strong>Si ayer fue duro, hoy buscá ese espacio de contención</strong> — está disponible para vos.</div>
     </div>
 
     <div class="divider"></div>
 
-    <div class="quote">¿Qué estás sosteniendo que ya no es tuyo sostener?</div>
+    <div class="quote">¿Qué querés soltar antes de que llegue la Luna Llena?</div>
 
     <div class="ciclo">
-      <span style="font-size:18px">🌪️</span>
-      <span>La tensión de hoy es <strong>parte del proceso de transformación</strong> que arrancó con la Luna Nueva del 16. Lo que sale a la superficie hoy es material para trabajar — no para suprimir.</span>
+      <span style="font-size:18px">🌕</span>
+      <span>Faltan <strong>5 días para la Luna Llena en Sagitario del 31</strong>. Lo que atravesaste esta semana intensa tiene un propósito — la culminación viene con expansión y luz.</span>
     </div>
 
   </div>
@@ -193,12 +193,12 @@ body { min-height: 100vh; background: #080408 !important; font-family: 'Palatino
   <div class="panel" id="panel-tarot">
     <div class="tarot-num">
       <div class="tarot-num-lbl">CARTA NUMEROLÓGICA DEL DÍA</div>
-      <div class="tarot-num-val">2+5+0+5+2+0+2+6 = <strong>22 → 4 → El Emperador</strong></div>
+      <div class="tarot-num-val">2+6+0+5+2+0+2+6 = <strong>23 → 5 → El Hierofante</strong></div>
     </div>
 
     <div id="back-wrap" class="card-back-wrap">
       <div class="card-back" onclick="flipCard()">
-        <div class="card-back-icon">👑</div>
+        <div class="card-back-icon">🕯️</div>
         <div class="card-back-lbl">Revelar</div>
         <div class="card-back-hint">toca la carta</div>
       </div>
@@ -207,26 +207,26 @@ body { min-height: 100vh; background: #080408 !important; font-family: 'Palatino
 
     <div id="front-wrap" class="card-front-wrap" style="display:none;">
       <div class="card-face">
-        <div class="card-roman">IV</div>
+        <div class="card-roman">V</div>
         <div class="card-art">
-          <div class="card-main">👑</div>
+          <div class="card-main">🕯️</div>
           <div class="card-orbs">
             <span style="animation:drift 3s .2s ease-in-out infinite">✦</span>
-            <span style="animation:drift 3s .5s ease-in-out infinite">⚡</span>
+            <span style="animation:drift 3s .5s ease-in-out infinite">🌒</span>
             <span style="animation:drift 3s .8s ease-in-out infinite">✦</span>
           </div>
           <div style="font-size:19px;animation:drift 3s .4s ease-in-out infinite">⟡</div>
         </div>
-        <div class="card-name">El Emperador</div>
+        <div class="card-name">El Hierofante</div>
       </div>
 
       <div class="card-info">
         <div class="card-info-head">
-          <div class="card-info-title">El Emperador · IV</div>
+          <div class="card-info-title">El Hierofante · V</div>
           <div class="card-info-badge">ARCANO MAYOR</div>
         </div>
-        <p>La carta del <strong>poder, la autoridad y la estructura</strong>. El Emperador no es el que grita más fuerte — es el que mantiene la calma cuando todo tiembla. Aparece hoy, en plena cuadratura Marte-Plutón, como una invitación a ejercer el poder <em>desde la templanza, no desde el miedo o la reacción</em>.</p>
-        <p>La pregunta de El Emperador hoy es: <strong>¿desde qué lugar estás ejerciendo tu autoridad interna?</strong> Podés elegir reaccionar o podés elegir gobernar. La diferencia está en el espacio entre el estímulo y la respuesta.</p>
+        <p>La carta de la <strong>sabiduría transmitida y el aprendizaje profundo</strong>. El Hierofante aparece cuando necesitamos buscar guía — no desde afuera como una dependencia, sino como una apertura a la <em>sabiduría que viene de la experiencia propia y ajena</em>. Después de días intensos, esta carta invita a reflexionar y aprender.</p>
+        <p>Hoy, con Luna en Escorpio procesando lo vivido, El Hierofante pregunta: <strong>¿qué aprendiste esta semana?</strong> La intensidad siempre trae enseñanza. Reconocerla es el primer paso para integrarla.</p>
       </div>
 
       <div class="keywords" id="kw-list"></div>
@@ -243,12 +243,12 @@ body { min-height: 100vh; background: #080408 !important; font-family: 'Palatino
 function toggleExplainer(btn){btn.classList.toggle('abierto');const body=btn.nextElementSibling;body.classList.toggle('visible');}
 const sc=document.getElementById('stars');
 for(let i=0;i<70;i++){const s=document.createElement('div');const sz=Math.random()*2.4+0.4;s.style.cssText='position:fixed;border-radius:50%;background:#fff;opacity:0;pointer-events:none;z-index:1;left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation:twinkle '+(Math.random()*3+2).toFixed(2)+'s '+(Math.random()*4).toFixed(2)+'s ease-in-out infinite;';sc.appendChild(s);}
-const kws=["Poder interno","Templanza","Estructura","Autoridad consciente","Transformación","Gobernar desde adentro"];
+const kws=["Aprendizaje","Sabiduría","Integración","Guía interior","Reflexión","Profundidad"];
 const kl=document.getElementById('kw-list');
 kws.forEach((k)=>{const s=document.createElement('span');s.className='kw';s.textContent=k;kl.appendChild(s);});
 function switchTab(t){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById('panel-'+t).classList.add('on');document.getElementById('btn-'+t).classList.add('active');}
 function flipCard(){document.getElementById('back-wrap').style.display='none';document.getElementById('front-wrap').style.display='block';}
-const msgs=["Podés reaccionar o podés gobernar. Elegí.","Tu poder interno no necesita aprobación externa.","La calma también es una forma de fuerza.","Lo que soltás hoy te libera mañana.","Hay sabiduría en elegir cuándo actuar y cuándo esperar."];
+const msgs=["Lo que viviste esta semana tiene una enseñanza. Buscala.","Después de la tormenta siempre hay algo nuevo que ver.","Soltar también es una forma de crecer.","La Luna Llena del 31 llega con luz. Preparate.","La sabiduría más profunda viene de lo que ya atravesaste."];
 let idx=0;
 function revealMsg(){showMsg(idx);setInterval(()=>{idx=(idx+1)%msgs.length;showMsg(idx);},3000);}
 function showMsg(i){document.getElementById('reveal-area').innerHTML='<div class="tarot-msg">✦ '+msgs[i]+' ✦</div>';}
